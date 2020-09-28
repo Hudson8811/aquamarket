@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'AktifoBLight';
+    src: url("../fonts/Aktifo-B-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AktifoBMedium';
+    src: url("../fonts/Aktifo-B-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AktifoBSemiBold';
+    src: url("../fonts/Aktifo-B-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AktifoBBold';
+    src: url("../fonts/Aktifo-B-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+// ШРИФТЫ
+$light: 'AktifoBLight';
+$medium: 'AktifoBMedium';
+$semiBold:'AktifoBSemiBold';
+$bold:'AktifoBBold';
+
+// РАЗМЕРЫ ШРИФТОВ
+$smallText: .875rem; //14px
+$smallText2: .9375rem; //15px
+$normalText: 1rem; //16px
+$normalText2: 1.0625rem; //17px
+$smallBigText: 1.125rem; //18px
+$smallBigText2: 1.1875rem; //19px
+$bigText: 1.25rem; //20px
+$bigText2: 1.3125rem; //21px
+$extraBigText: 2.25rem; //36px
+$extraBigText2: 3rem; //48px
+
+// ЦВЕТА
+$lightMain: #fff;
+$darkMain: #000;
+$darkMainColor: #000531;
+$darkMainColor2: #031032;
+$dark30: #96a1bc;
+$brightLightMain: #ccfffc;
+$lineDarker: #eceef2;
+$red: #f0455a;
+$arrowHover: #bdfffb;

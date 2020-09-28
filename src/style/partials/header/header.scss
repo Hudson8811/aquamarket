@@ -1,0 +1,184 @@
+.header{
+        width: 100%;
+        
+    &__top_menu{
+        border-bottom: 0.5px solid $darkMain;
+
+        ul{
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 43px;
+        }
+
+        &__item{
+            position: relative;
+            display: block;
+            padding-left: 18px;
+            margin-right: auto;
+            font-family: $light;
+            font-size: $smallText;
+
+            &:before{
+                content:'';
+                position: absolute;
+                left: 0;
+                top:50%;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: $darkMain;
+            }
+        }
+    }
+
+    &__info_block{
+        display: flex;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 25px 0;
+
+        .call_btn,
+        .personal_area{
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .personal_area{
+            margin-left: 38px;
+        }
+    }
+
+    &__logo{
+        display: block;
+        max-height: 49px;
+
+        img{
+            display: block;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &__market{
+        display: block;
+        margin: 0 66px;
+        font-family: $light;
+        font-size: $smallText;
+        text-decoration: none;
+        color: $darkMain;
+    }
+
+    &__phone{
+        &_block{
+            position: relative;
+            box-sizing: border-box;
+            padding: 10px 0;
+
+            &:hover{
+
+                .header__phone_link:after{
+                    transform: rotate(180deg);
+                }
+
+                .header__phone_hover{
+                    transform: scaleY(1);
+                   
+                }
+            }
+        }
+
+        &_link{
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: $semiBold;
+            font-size: $normalText;
+            text-decoration: none;
+            color: $darkMain;
+
+            &:after{
+                content:'';
+                display: flex;
+                box-sizing: border-box;
+                flex-shrink: 0;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                margin-left: 20px;
+                border-radius: 50%;
+                border: 0.5px solid $darkMain;
+                background: center / auto url(../img/arrow.svg) no-repeat;
+                transition: .5s;
+            }
+        }
+
+        &_hover{
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            display: block;
+            box-sizing: border-box;
+            display: block;
+            width: 266px;
+            padding: 25px 34px;
+            margin-left: -133px;
+            background-color: $dark30;
+            transition: .5s;
+            transform-origin: center top;
+            transform: scaleY(0);
+
+            .header__city,
+            .header__mail{
+                display: block;
+                font-family: $medium;
+                font-size: $smallText2;
+                text-decoration: none;
+                color: $lightMain;
+            }
+
+            .header__city{
+                padding-bottom: 20px;
+                border-bottom: 0.5px solid $lightMain;
+            }
+
+            .header__mail{
+                padding-top: 20px;
+            }
+        }
+    }
+    
+    &__times{
+        display: block;
+        margin-left: auto;
+        margin-right: 107px;
+        font-family: $light;
+    }
+
+    &__days{
+        font-family: $medium;
+    }
+
+    &__times,
+    &__days{
+        font-size: $smallText;
+        color: $darkMain;
+    }
+
+    &__bottom_block{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        &__border_line{
+            display: block;
+            width: 38px;
+            border-bottom: 0.5px solid $darkMain;
+            flex-shrink: 0;
+        }
+    }
+}
