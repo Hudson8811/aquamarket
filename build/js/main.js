@@ -27,103 +27,142 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 /* my scripts */
 
 $(document).ready(function () {
-// Настройка сайдбара! 
-    $('.sidebar__main__link').hover( function(){
+  // Настройка сайдбара!
+  $('.sidebar .sidebar__main__link').hover(function () {
+    const sidebarDataId = $(this).data('id');
 
-        const sidebarDataId = $(this).data('id');
-     
-        $('.sidebar__hover').addClass('active');
-        $('.sidebar__side').removeClass('active');
-        $(`.sidebar__side[data-id="${sidebarDataId}"]`).addClass('active');
+    $('.body__overlay').addClass('active');
+    $('.header').addClass('header--overlay');
+    $('.sidebar__hover').addClass('active');
+    $('.sidebar__side').removeClass('active');
+    $(`.sidebar__side[data-id="${sidebarDataId}"]`).addClass('active');
+  });
 
-    })
+  $('.sidebar').mouseleave(function () {
+    $('.body__overlay').removeClass('active');
+    $('.header').removeClass('header--overlay');
+    $('.sidebar__hover').removeClass('active');
+    $('.sidebar__side').removeClass('active');
+  });
+  // Настройка сайдбара!
 
-    $('.sidebar').mouseleave( function(){
-     
-        $('.sidebar__hover').removeClass('active');
-        $('.sidebar__side').removeClass('active');
-    })
-// Настройка сайдбара!
+  // Инициализайия главного баннера!
+  $('.banner_slider--js').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    prevArrow: $('.banner__tools .banner__arrow--prev--js'),
+    nextArrow: $('.banner__tools .banner__arrow--next--js'),
+    appendDots: $('.banner__tools .banner__dots--js'),
+    customPaging: function () {
+      return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
+    },
+  });
+  // Инициализайия главного баннера!
 
-// Инициализайия главного баннера!
-    $('.banner_slider--js').slick({
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        prevArrow:$('.banner__tools .banner__arrow--prev--js'),
-        nextArrow:$('.banner__tools .banner__arrow--next--js'),
-        appendDots:$('.banner__tools .banner__dots--js'),
-        customPaging:function(){
-            return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
-        }
+  // Настройка прогресс-бара!
+  const radius = 13;
+  const circumference = 2 * Math.PI * radius;
+
+  $('.banner__svg__circle').css({
+    strokeDasharray: `${circumference} ${circumference}`,
+    strokeDashoffset: circumference,
+  });
+
+  function setProgress(item, percent, times) {
+    const offset = circumference - (percent / 100) * circumference;
+    $(item).css({
+      transition: `${times}s`,
+      strokeDashoffset: offset,
     });
-// Инициализайия главного баннера!
+  }
 
-// Настройка прогресс-бара!
-    const radius = 13;
-    const circumference = 2 * Math.PI * radius;
+  setProgress('.banner__tools .slick-active .banner__svg__circle', 100, 3);
 
-    $('.banner__svg__circle').css({
-        'strokeDasharray': `${circumference} ${circumference}`,
-        'strokeDashoffset': circumference,
-    })
-    
-    function setProgress(item, percent, times){
-        const offset = circumference - percent / 100 * circumference;
-        $(item).css({
-            'transition': `${times}s`,
-            'strokeDashoffset': offset,
-        });
-    }
+  $('.banner_slider--js').on('beforeChange', function (slick, currentSlide) {
+    setProgress('.banner__tools .banner__svg__circle', 0, 0);
 
-    setProgress('.banner__tools .slick-active .banner__svg__circle', 100, 3);
+    setTimeout(() => {
+      setProgress('.banner__tools .slick-active .banner__svg__circle', 100, 3);
+    }, 0);
+  });
+  // Настройка прогресс-бара!
 
-    $('.banner_slider--js').on('beforeChange', function(slick, currentSlide){
-        setProgress('.banner__tools .banner__svg__circle', 0, 0);
+  // Разворот каталога категорий!
+  $(document).on('click', '.categories_catalog__more_btn', function (e) {
+    e.preventDefault();
+    $('.categories_catalog__nodes_wrapper').removeClass('active');
+    $(this).siblings('.categories_catalog__nodes_wrapper').addClass('active');
+  });
+  // Разворот каталога категорий!
 
-        setTimeout(() => {
-            setProgress('.banner__tools .slick-active .banner__svg__circle', 100, 3);
-        }, 0);
-    });
-// Настройка прогресс-бара!
-
-// Разворот каталога категорий!
-    $(document).on('click', '.categories_catalog__more_btn', function (e){
-        e.preventDefault();
-        $('.categories_catalog__nodes_wrapper').removeClass('active');
-        $(this).siblings('.categories_catalog__nodes_wrapper').addClass('active');
-    })
-// Разворот каталога категорий!
-
-// Инициализайия каталога брендов!
-$('.brends__slider--js').slick({
+  // Инициализайия каталога брендов!
+  $('.brends__slider--js').slick({
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 5,
     slidesToScroll: 5,
     dots: true,
-    prevArrow:$('.brends__tools .banner__arrow--prev--js'),
-    nextArrow:$('.brends__tools .banner__arrow--next--js'),
-    appendDots:$('.brends__tools .banner__dots--js'),
-    customPaging:function(){
-        return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
-    }
-});
-// Инициализайия каталога брендов!
+    prevArrow: $('.brends__tools .banner__arrow--prev--js'),
+    nextArrow: $('.brends__tools .banner__arrow--next--js'),
+    appendDots: $('.brends__tools .banner__dots--js'),
+    customPaging: function () {
+      return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
+    },
+  });
+  // Инициализайия каталога брендов!
 
-// Настройка прогресс-бара!
-setProgress('.brends__tools .slick-active .banner__svg__circle', 100, 3);
+  // Настройка прогресс-бара!
+  setProgress('.brends__tools .slick-active .banner__svg__circle', 100, 3);
 
-$('.brends__slider--js').on('beforeChange', function(slick, currentSlide){
+  $('.brends__slider--js').on('beforeChange', function (slick, currentSlide) {
     setProgress('.brends__tools .banner__svg__circle', 0, 0);
 
     setTimeout(() => {
-        setProgress('.brends__tools .slick-active .banner__svg__circle', 100, 3);
+      setProgress('.brends__tools .slick-active .banner__svg__circle', 100, 3);
     }, 0);
-});
-// Настройка прогресс-бара!
+  });
+  // Настройка прогресс-бара!
+
+  // Шапка сайта!
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 147) {
+      $('.header').addClass('header--fixed');
+      $('.fix_cct').addClass('fix_cct--fixed');
+      $('.body__overlay').addClass('body__overlay--fixed');
+    } else {
+      $('.header').removeClass('header--fixed');
+      $('.fix_cct').removeClass('fix_cct--fixed');
+      $('.body__overlay').removeClass('body__overlay--fixed');
+    }
+  });
+  // Шапка сайта!
+
+  // Настройка всплывающего каталога!
+  $(document).on('click', '.catalog_btn', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('catalog_btn--active');
+    $('.body__overlay').toggleClass('active');
+    $('.header').toggleClass('header--overlay').toggleClass('header--active_catalog');
+    $('.fix_cct').toggleClass('fix_cct--active');
+  });
+
+  $(document).on('click', '.fix_cct__link', function (e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass('fix_cct__link--active')) {
+      $('.fix_cct__link').removeClass('fix_cct__link--active');
+      $(this).addClass('fix_cct__link--active');
+      $('.fix_cct__sublist').slideUp();
+      $(this).siblings('.fix_cct__sublist').slideDown();
+    } else {
+      $(this).removeClass('fix_cct__link--active');
+      $(this).siblings('.fix_cct__sublist').slideUp();
+    }
+  });
+  // Настройка всплывающего каталога!
 });
