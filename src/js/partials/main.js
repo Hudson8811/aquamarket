@@ -137,4 +137,63 @@ $(document).ready(function () {
     }
   });
   // Настройка всплывающего каталога!
+
+  // Сайдбар каталога!
+  $(document).on('click', '.products__sidebar__link', function () {
+    if (!$(this).hasClass('products__sidebar__link--active')) {
+      $(this).addClass('products__sidebar__link--active');
+      $(this)
+        .siblings('.products__sidebar__sidecontent')
+        .addClass('products__sidebar__sidecontent--active');
+      $(this).parent('li').addClass('products__sidebar__sidecontent--active');
+    } else {
+      $(this).removeClass('products__sidebar__link--active');
+      $(this)
+        .siblings('.products__sidebar__sidecontent')
+        .removeClass('products__sidebar__sidecontent--active');
+      $(this).parent('li').removeClass('products__sidebar__sidecontent--active');
+    }
+  });
+  // Сайдбар каталога!
+
+  // Слайдер карточки товара!
+  $('.products__images__slider--js').slick({
+    infinite: true,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+  });
+  // Слайдер карточки товара!
+
+  // Ползунок цены!
+  $('.price__filter__slider').slider({
+    animate: 'slow',
+    range: true,
+    values: [0, 150000],
+    max: 150000,
+    slide: function (event, ui) {
+      $('.price__filter__input--min').val(ui.values[0]);
+      $('.price__filter__input--max').val(ui.values[1]);
+    },
+  });
+
+  $('.price__filter__input--min').change(function () {
+    let minPriceValue = $(this).val();
+    let maxPriceValue = $('.price__filter__input--max').val();
+
+    $('.price__filter__slider').slider({
+      values: [minPriceValue, maxPriceValue],
+    });
+  });
+
+  $('.price__filter__input--max').change(function () {
+    let maxPriceValue = $(this).val();
+    let minPriceValue = $('.price__filter__input--min').val();
+
+    $('.price__filter__slider').slider({
+      values: [minPriceValue, maxPriceValue],
+    });
+  });
+  // Ползунок цены!
 });
