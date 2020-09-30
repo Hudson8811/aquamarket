@@ -1,0 +1,133 @@
+.card_product {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  &__wrapper {
+    padding-top: 100px;
+  }
+
+  &__slider_wrapper {
+    position: relative;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 68px 82px 0 78px;
+    border-top: 1px solid $darkMain;
+  }
+
+  &__big_slider {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+
+    &__item {
+      img {
+        display: block;
+        width: 98%;
+        max-width: 467px;
+        margin: 0 auto;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__small_slider {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    z-index: 3;
+    max-width: 64px;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 14px 0;
+      min-height: 64px;
+      cursor: pointer;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &--active {
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+
+      img {
+        display: block;
+        width: 98%;
+        max-width: 64px;
+        margin: 0 auto;
+        object-fit: cover;
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+
+  &__tools {
+    position: absolute;
+    top: 68px;
+    right: 0;
+    z-index: 3;
+    .banner__arrow {
+      border-color: $darkMain;
+
+      & + .banner__arrow {
+        margin-top: 3px;
+      }
+
+      &:hover {
+        background-color: $darkMain;
+
+        svg {
+          path {
+            stroke: $lightMain;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 54px;
+
+    .bread_crumbs {
+      margin-bottom: 50px;
+    }
+
+    .products__desc {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 33px;
+    }
+    .products__fp_wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 38px;
+
+      a + a {
+        margin-top: 0;
+        margin-left: 38px;
+      }
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    margin: 20px 0 45px;
+    font-family: $medium;
+    font-size: $bigText3;
+    color: $darkMain;
+  }
+
+  &__parametrs {
+    .favorites__counts {
+      margin-bottom: 0;
+    }
+  }
+}

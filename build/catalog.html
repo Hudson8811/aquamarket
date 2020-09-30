@@ -234,14 +234,14 @@
 
       <main class="main">
         <div class="container products__heading__wrapper">
-          <div class="bread_crumbs">
+          <ul class="bread_crumbs">
             <li>
               <a href="#" class="bread_crumbs__item">Главная</a>
             </li>
             <li>
               <a href="#" class="bread_crumbs__item">Трубы для воды и отопления</a>
             </li>
-          </div>
+          </ul>
           <div class="products__heading">
             <h2 class="section__title">Металлопластиковые</h2>
             <span class="products__firsts">Сначала:</span>
@@ -249,16 +249,44 @@
               <a href="#" class="products__populars__link">Популярные</a>
 
               <div class="products__populars__hover">
-                <a href="#" class="products__populars__hover__link"></a>
-                <a href="#" class="products__populars__hover__link"></a>
-                <a href="#" class="products__populars__hover__link"></a>
-                <a href="#" class="products__populars__hover__link"></a>
+                <a href="#" class="products__populars__hover__link">Дешевые</a>
+                <a href="#" class="products__populars__hover__link">Дорогие</a>
+                <a href="#" class="products__populars__hover__link">Новые</a>
               </div>
             </div>
           </div>
         </div>
 
         <div class="container">
+          <!-- ВИДЖЕТ СРАВНЕНИЯ -->
+          <a class="comparison__widget" href="#">
+            <svg
+              width="24"
+              height="20"
+              viewBox="0 0 24 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.3471 11.4337C16.383 10.4719 16.383 8.9126 17.3471 7.95084L19.0927 6.20941L20.8383 7.95084C21.8024 8.9126 21.8024 10.4719 20.8383 11.4337C19.8743 12.3954 18.3112 12.3954 17.3471 11.4337Z"
+                stroke="black"
+                stroke-width="2"
+              />
+              <path
+                d="M3.16154 11.4337C2.19746 10.4719 2.19746 8.9126 3.16154 7.95084L4.90716 6.20941L6.65279 7.95084C7.61687 8.9126 7.61687 10.4719 6.65279 11.4337C5.68871 12.3954 4.12562 12.3954 3.16154 11.4337Z"
+                stroke="black"
+                stroke-width="2"
+              />
+              <line x1="12" y1="4.34416e-08" x2="12" y2="15.9231" stroke="black" stroke-width="2" />
+              <line x1="22" y1="1" x2="2" y2="1" stroke="black" stroke-width="2" />
+              <line x1="19" y1="-4.34416e-08" x2="19" y2="6" stroke="black" stroke-width="2" />
+              <line x1="5" y1="-4.34416e-08" x2="5" y2="6" stroke="black" stroke-width="2" />
+              <rect x="2" y="16" width="20" height="3" stroke="black" stroke-width="2" />
+            </svg>
+
+            <span class="comparison__widget__count">3</span>
+          </a>
+          <!-- ВИДЖЕТ СРАВНЕНИЯ -->
           <div class="content">
             <aside class="products__sidebar">
               <ul class="products__sidebar__content">
@@ -282,7 +310,159 @@
                     </div>
                   </div>
                 </li>
+                <li>
+                  <a class="products__sidebar__link" href="#">Название фильтра</a>
+                  <div class="products__sidebar__sidecontent">
+                    <div class="price__filter__wrapper">
+                      <div class="price__filter">
+                        <input
+                          type="text"
+                          value="0"
+                          class="price__filter__input price__filter__input--min"
+                        />
+                        <input
+                          type="text"
+                          value="150000"
+                          class="price__filter__input price__filter__input--max"
+                        />
+                      </div>
+                      <div class="price__filter__slider"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="products__sidebar__link" href="#">Максимальный разход газа</a>
+                  <div class="products__sidebar__sidecontent">
+                    <div class="price__filter__wrapper">
+                      <div class="price__filter">
+                        <input
+                          type="text"
+                          value="0"
+                          class="price__filter__input price__filter__input--min"
+                        />
+                        <input
+                          type="text"
+                          value="150000"
+                          class="price__filter__input price__filter__input--max"
+                        />
+                      </div>
+                      <div class="price__filter__slider"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="products__sidebar__link" href="#">Чекбоксы</a>
+                  <div class="products__sidebar__sidecontent">
+                    <div class="castom_scroll">
+                      <label class="products__radio_filter">
+                        <input type="radio" name="radio" id="1" />
+                        <span>Без вентилятора</span>
+                        <b></b>
+                      </label>
+                      <label class="products__radio_filter">
+                        <input type="radio" name="radio" id="2" />
+                        <span>С вентилятором</span>
+                        <b></b>
+                      </label>
+                      <label class="products__radio_filter">
+                        <input type="radio" name="radio" id="3" />
+                        <span>Боковое подключение</span>
+                        <b></b>
+                      </label>
+                      <label class="products__radio_filter">
+                        <input type="radio" name="radio" id="4" />
+                        <span>Без вентилятора</span>
+                        <b></b>
+                      </label>
+                      <label class="products__radio_filter">
+                        <input type="radio" name="radio" id="5" />
+                        <span>Боковое подключение</span>
+                        <b></b>
+                      </label>
+                      <label class="products__radio_filter">
+                        <input type="radio" name="radio" id="6" />
+                        <span>С вентилятором</span>
+                        <b></b>
+                      </label>
+                      <label class="products__radio_filter">
+                        <input type="radio" name="radio" id="7" />
+                        <span>Боковое подключение</span>
+                        <b></b>
+                      </label>
+                      <label class="products__radio_filter">
+                        <input type="radio" name="radio" id="8" />
+                        <span>Без вентилятора</span>
+                        <b></b>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="products__sidebar__link" href="#">Бренды</a>
+                  <div class="products__sidebar__sidecontent">
+                    <div class="castom_scroll">
+                      <span class="products__check_filter__heading">А:</span>
+                      <label class="products__check_filter">
+                        <input type="radio" name="check" />
+                        <span>Без вентилятора</span>
+                        <b></b>
+                      </label>
+                      <label class="products__check_filter">
+                        <input type="radio" name="check" />
+                        <span>С вентилятором</span>
+                        <b></b>
+                      </label>
+                      <label class="products__check_filter">
+                        <input type="radio" name="check" />
+                        <span>Боковое подключение</span>
+                        <b></b>
+                      </label>
+                      <label class="products__check_filter">
+                        <input type="radio" name="check" />
+                        <span>Без вентилятора</span>
+                        <b></b>
+                      </label>
+
+                      <span class="products__check_filter__heading">C:</span>
+                      <label class="products__check_filter">
+                        <input type="radio" name="check" />
+                        <span>Боковое подключение</span>
+                        <b></b>
+                      </label>
+                      <label class="products__check_filter">
+                        <input type="radio" name="check" />
+                        <span>С вентилятором</span>
+                        <b></b>
+                      </label>
+                      <label class="products__check_filter">
+                        <input type="radio" name="check" />
+                        <span>Без вентилятора</span>
+                        <b></b>
+                      </label>
+                      <label class="products__check_filter">
+                        <input type="radio" name="check" />
+                        <span>Без вентилятора</span>
+                        <b></b>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="products__sidebar__link" href="#">Температура дымовых газов, °С</a>
+                  <div class="products__sidebar__sidecontent">
+                    <div class="price__filter__wrapper">
+                      <div class="price__filter number__filter">
+                        <input type="text" value="60" class="price__filter__input" />
+                        <input type="text" value="185" class="price__filter__input" />
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
+              <div class="products__filter__settings">
+                <a class="products__filter__settings__link" href="#">Сбросить</a>
+                <a class="products__filter__settings__link" href="#">Применить</a>
+              </div>
             </aside>
             <div class="products__block">
               <div class="products__item">
@@ -747,6 +927,26 @@
                 </a>
               </div>
             </div>
+          </div>
+
+          <div class="pagination__wrapper">
+            <a href="#" class="categories_catalog__more_categories_btn">Еще 15</a>
+
+            <ul class="pagination">
+              <li><a class="pagination__link pagination__link--active" href="#">1</a></li>
+              <li><a class="pagination__link" href="#">2</a></li>
+              <li><a class="pagination__link" href="#">3</a></li>
+              <li><a class="pagination__link" href="#">4</a></li>
+              <li><a class="pagination__link" href="#">5</a></li>
+              <li><a class="pagination__link" href="#">6</a></li>
+              <li><a class="pagination__link" href="#">7</a></li>
+              <li><a class="pagination__link" href="#">8</a></li>
+              <li><a class="pagination__link" href="#">9</a></li>
+              <li><a class="pagination__link pagination__link--more" href="#">...</a></li>
+              <li><a class="pagination__link" href="#">13</a></li>
+              <li><a class="pagination__link" href="#">14</a></li>
+              <li><a class="pagination__link" href="#">15</a></li>
+            </ul>
           </div>
         </div>
       </main>

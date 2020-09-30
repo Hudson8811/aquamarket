@@ -411,3 +411,55 @@ body {
     }
   }
 }
+
+.castom_scroll.mCustomScrollbar {
+  height: 265px;
+  margin-top: 24px;
+
+  .mCSB_dragger_bar,
+  .mCSB_dragger:hover .mCSB_dragger_bar {
+    width: 4px;
+    background-color: $darkMain;
+    border-radius: 54px;
+  }
+
+  .mCSB_scrollTools {
+    right: -3px;
+    opacity: 1;
+
+    .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+    .mCSB_dragger:active .mCSB_dragger_bar {
+      background-color: $darkMain;
+    }
+
+    .mCSB_draggerRail {
+      width: 4px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #ffffff;
+      border-radius: 54px;
+    }
+  }
+}
+
+.comparison__widget {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97px;
+  width: 97px;
+  text-decoration: none;
+  background-color: $brightLightMain;
+  border-radius: 50%;
+
+  &__count {
+    display: block;
+    margin-top: -5px;
+    margin-left: 6px;
+    font-family: $bold;
+    font-size: $normalText;
+    color: $darkMain;
+  }
+}

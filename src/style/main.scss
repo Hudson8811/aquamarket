@@ -3,6 +3,7 @@
 @import 'partials/common/slick.scss';
 @import 'partials/common/mixin';
 @import 'partials/common/jquery-ui.css';
+@import 'partials/common/jquery.mCustomScrollbar.min.css';
 
 // МОИ СТИЛИ
 @import 'partials/common/vars.scss';
@@ -12,3 +13,5 @@
 @import 'partials/mainPage.scss';
 @import 'partials/category.scss';
 @import 'partials/catalog.scss';
+@import 'partials/favorites.scss';
+@import 'partials/cardProduct.scss';
