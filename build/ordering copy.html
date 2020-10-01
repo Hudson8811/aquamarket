@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Оформление заказа</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header header__ordering">
+        <div class="container header__info_block__wrapper">
+          <nav class="header__info_block">
+            <a class="header__logo" href="#">
+              <img src="img/mainLogo.svg" alt="logo" />
+            </a>
+      
+            <a href="#" class="header__market">Магазин сантехники</a>
+      
+            <div class="header__phone_block">
+              <a class="header__phone_link" href="tel:+7 (495) 769 86 28">+7 (495) 769 86 28</a>
+              <div class="header__phone_hover">
+                <span class="header__city">Москва</span>
+                <a class="header__mail" href="mailto:info@aquamarket.su">info@aquamarket.su</a>
+              </div>
+            </div>
+      
+            <span class="header__times"><span class="header__days">пн-вс:</span> 09.00-20.00</span>
+      
+            <a href="#" class="call_btn call__popup_btn--js">Заказать звонок</a>
+      
+            <a href="#" class="personal_area">
+              <span>Личный кабинет</span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="9" cy="6" r="5" stroke="black" stroke-width="2" />
+                <path
+                  d="M17.5716 16.8494C16.704 15.4057 15.4858 14.2044 14.03 13.3571C12.5742 12.5099 10.928 12.0441 9.24411 12.003C7.56023 11.9619 5.89323 12.3468 4.39782 13.1219C2.90241 13.8971 1.62703 15.0375 0.69004 16.4372L2.35203 17.5498C3.10162 16.43 4.12192 15.5177 5.31825 14.8976C6.51459 14.2774 7.84818 13.9695 9.19529 14.0024C10.5424 14.0353 11.8594 14.4079 13.024 15.0857C14.1887 15.7635 15.1632 16.7245 15.8573 17.8796L17.5716 16.8494Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="body__overlay"></div>
+
+      <main class="main">
+        <h1 class="ordering__heading">Оформление заказа</h1>
+
+        <div class="ordering__block">
+          <h2 class="ordering__block__heading">1/3. Контактная информация</h2>
+          <div class="ordering__block__content">
+            <form class="ordering__form">
+              <label class="ordering__inputbox">
+                <span class="ordering__inputbox--placeholder">Ваше имя:</span>
+                <span class="ordering__inputbox--description">Не обязательно</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="text" class="ordering__inputbox--input" />
+              </label>
+              <label class="ordering__inputbox ordering__inputbox--50">
+                <span class="ordering__inputbox--description">Чтобы потдвердить заказ</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+                <input
+                  type="text"
+                  placeholder="+7 (___) ___-__-__*"
+                  class="ordering__inputbox--input mask--js"
+                />
+              </label>
+              <label class="ordering__inputbox ordering__inputbox--50">
+                <span class="ordering__inputbox--placeholder">Е-mail:</span>
+                <span class="ordering__inputbox--description">Чтобы получить чек</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="email" class="ordering__inputbox--input" />
+              </label>
+            </form>
+          </div>
+        </div>
+
+        <div class="ordering__block">
+          <h2 class="ordering__block__heading">2/3. Способ получения</h2>
+          <div class="ordering__block__func_wrapper">
+            <span class="ordering__block__func_heading">Самовывоз</span>
+            <div class="ordering__block__func_content ordering__block__func_content__search">
+              <div class="address_select__wrapper">
+                <div class="address_select">
+                  <div class="address_select__input">г. Москва, Жулебинский, 5</div>
+                  <div class="address_select__content">
+                    <span class="address_select__content__item">г. Москва, Жулебинский, 5</span>
+                    <span class="address_select__content__item">
+                      г. Москва, Жулебинский бульвар, 5
+                    </span>
+                    <span class="address_select__content__item">г. Москва, Жулебинский, 5</span>
+                  </div>
+                </div>
+                <a href="#" class="address_select__link">
+                  <span>Показать на Google картах</span>
+                  <svg
+                    width="20"
+                    height="8"
+                    viewBox="0 0 20 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.3536 4.35355C19.5488 4.15829 19.5488 3.84171 19.3536 3.64645L16.1716 0.464466C15.9763 0.269204 15.6597 0.269204 15.4645 0.464466C15.2692 0.659728 15.2692 0.976311 15.4645 1.17157L18.2929 4L15.4645 6.82843C15.2692 7.02369 15.2692 7.34027 15.4645 7.53553C15.6597 7.7308 15.9763 7.7308 16.1716 7.53553L19.3536 4.35355ZM0 4.5H19V3.5H0V4.5Z"
+                      fill="black"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="ordering__block__func_wrapper">
+            <span class="ordering__block__func_heading">Доставка</span>
+            <div class="ordering__block__func_content">
+              <form class="ordering__form">
+                <label class="ordering__inputbox">
+                  <span class="ordering__inputbox--placeholder">Город:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="text" class="ordering__inputbox--input" />
+                </label>
+                <label class="ordering__inputbox ordering__inputbox--40">
+                  <span class="ordering__inputbox--placeholder">Улица:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="text" class="ordering__inputbox--input" />
+                </label>
+                <label class="ordering__inputbox ordering__inputbox--16">
+                  <span class="ordering__inputbox--placeholder">Дом:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="email" class="ordering__inputbox--input" />
+                </label>
+                <label class="ordering__inputbox ordering__inputbox--16">
+                  <span class="ordering__inputbox--placeholder">Корпус:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="email" class="ordering__inputbox--input" />
+                </label>
+                <label class="ordering__inputbox ordering__inputbox--16">
+                  <span class="ordering__inputbox--placeholder">Квартира/офис:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="email" class="ordering__inputbox--input" />
+                </label>
+
+                <label class="ordering__inputbox ordering__inputbox--comment_wrapper">
+                  <span class="ordering__inputbox--placeholder">Комментарий:</span>
+                  <textarea
+                    class="ordering__inputbox--input ordering__inputbox--comment"
+                  ></textarea>
+                </label>
+              </form>
+              <div class="ordering__price">
+                <span class="ordering__price_title">Стоимость доставки:</span>
+                <span class="ordering__price_pay">0 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ordering__block">
+          <h2 class="ordering__block__heading">3/3. Способ оплаты</h2>
+          <div class="ordering__block__content">
+            <form class="ordering__form">
+              <label class="ordering__radio_btn">
+                <div class="ordering__radio_btn__heading">
+                  <span class="ordering__radio_btn__title">Наличными</span>
+                  <span class="ordering__radio_btn__subtitle">При получении</span>
+                </div>
+
+                <div class="ordering__radio_btn__input_wrapper">
+                  <input class="ordering__radio_btn__input" type="radio" name="pay" id="1" />
+                  <b class="ordering__radio_btn__b"></b>
+                </div>
+              </label>
+
+              <label class="ordering__radio_btn">
+                <div class="ordering__radio_btn__heading">
+                  <span class="ordering__radio_btn__title">Картой</span>
+                  <span class="ordering__radio_btn__subtitle">При получении</span>
+                </div>
+
+                <div class="ordering__radio_btn__input_wrapper">
+                  <input class="ordering__radio_btn__input" type="radio" name="pay" id="2" />
+                  <b class="ordering__radio_btn__b"></b>
+                </div>
+              </label>
+
+              <label class="ordering__radio_btn">
+                <div class="ordering__radio_btn__heading">
+                  <span class="ordering__radio_btn__title">Картой онлайн</span>
+                  <span class="ordering__radio_btn__subtitle">На сайте</span>
+                </div>
+
+                <div class="ordering__radio_btn__input_wrapper">
+                  <input class="ordering__radio_btn__input" type="radio" name="pay" id="3" />
+                  <b class="ordering__radio_btn__b"></b>
+                </div>
+              </label>
+
+              <label class="ordering__radio_btn">
+                <div class="ordering__radio_btn__heading">
+                  <span class="ordering__radio_btn__title">Безналичная оплата</span>
+                  <span class="ordering__radio_btn__subtitle">По счету</span>
+                </div>
+
+                <div class="ordering__radio_btn__input_wrapper">
+                  <input class="ordering__radio_btn__input" type="radio" name="pay" id="4" />
+                  <b class="ordering__radio_btn__b"></b>
+                </div>
+              </label>
+            </form>
+          </div>
+        </div>
+
+        <div class="ordering__block ordering__block__order">
+          <div class="ordering__block__content">
+            <form class="ordering__form">
+              <label class="ordering__inputbox">
+                <span class="ordering__inputbox--placeholder">Промокод:</span>
+                <span class="ordering__inputbox--description">Если есть</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="text" class="ordering__inputbox--input" />
+              </label>
+            </form>
+            <div class="ordering_bay">
+              <div class="ordering_bay__description">
+                <span class="ordering_bay__subtitle">2 товара на сумму:</span>
+                <span class="ordering_bay__title">300 350 ₽ </span>
+              </div>
+
+              <a href="#" class="card_product__inbasket_btn">Оформить заказ</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="call_popup">
+      <a href="#" class="call_popup__remove_btn"> </a>
+      <span class="call_popup__title">Перезвоним <span class="nowrap">в течении 5-ти минут</span></span>
+    
+      <form class="call_popup__form">
+        <input type="text" class="call_popup__phone mask--js" placeholder="+7 (___) ___-__-__" />
+        <button class="call_popup__submit">Купить в 1 клик!</button>
+      </form>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

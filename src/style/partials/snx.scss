@@ -1,0 +1,82 @@
+.snx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: $brightLightMain;
+
+  &__page {
+    padding-top: 102px;
+
+    .main {
+      padding-top: 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  &__image {
+    display: block;
+    width: 50%;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 20px;
+    font-family: $bold;
+    font-size: $bigText4;
+    color: $darkMain;
+  }
+
+  &__title {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 12vw;
+    margin-bottom: 30px;
+    font-family: $bold;
+    font-size: $GreatText;
+    color: $darkMain;
+  }
+
+  &__description {
+    display: block;
+    margin-bottom: 50px;
+    font-family: $medium;
+    font-size: $smallBigText;
+    color: $darkMain;
+  }
+
+  &__btn {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    width: 98%;
+    max-width: 435px;
+    padding: 0 67px;
+    font-family: $semiBold;
+    font-size: $normalText2;
+    text-decoration: none;
+    color: $brightLightMain;
+    background-color: $darkMain;
+    transition: 0.5s;
+
+    &:hover {
+      color: $darkMainColor;
+      background-color: $brightLightMain;
+
+      svg {
+        path {
+          fill: $darkMainColor;
+        }
+      }
+    }
+  }
+}
