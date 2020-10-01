@@ -463,3 +463,82 @@ body {
     color: $darkMain;
   }
 }
+
+.address_select {
+  position: relative;
+  border: 1px solid $darkMain;
+  border-radius: 555px;
+  cursor: pointer;
+
+  &__wrapper {
+    width: 98%;
+    max-width: 1010px;
+    margin: 0 auto;
+  }
+
+  &__input {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    width: calc(100% - 68px);
+    padding: 0 34px 0 0;
+    margin: 0 auto;
+    font-family: $bold;
+    font-size: $normalText;
+    color: $darkMainColor;
+    background: right 0 center / auto url(../img/arrow.svg) no-repeat;
+  }
+
+  &__content {
+    display: none;
+
+    &__item {
+      display: block;
+      font-family: $medium;
+      font-size: $normalText;
+      color: $darkMainColor;
+
+      & + & {
+        margin-top: 25px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-top: 25px;
+    font-family: $medium;
+    font-size: $normalText;
+    text-decoration: none;
+    color: $darkMain;
+
+    span {
+      margin-right: 15px;
+      text-decoration: underline;
+    }
+
+    &--disabled {
+      display: none;
+    }
+  }
+
+  &--active {
+    border-radius: 20px;
+
+    .address_select__input {
+      border-bottom: 1px solid $darkMain;
+    }
+
+    .address_select__content {
+      display: block;
+      box-sizing: border-box;
+      padding: 35px 34px;
+    }
+  }
+}

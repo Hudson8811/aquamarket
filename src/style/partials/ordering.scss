@@ -1,0 +1,335 @@
+.ordering {
+  &__heading {
+    display: block;
+    text-align: center;
+    font-family: $bold;
+    font-size: $GreatText;
+    color: $darkMain;
+  }
+
+  &__block {
+    margin-top: 120px;
+
+    &__heading {
+      text-align: center;
+      display: block;
+      box-sizing: border-box;
+      padding-bottom: 60px;
+      margin-bottom: 70px;
+      font-family: $bold;
+      font-size: $extraBigText;
+      border-bottom: 1px solid $darkMain;
+    }
+
+    &__content {
+      width: 98%;
+      max-width: 1010px;
+      margin: 0 auto;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__inputbox {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    padding-bottom: 21px;
+    border-bottom: 2px solid $darkMainColor;
+
+    & + & {
+      margin-top: 56px;
+    }
+
+    &--50 {
+      width: calc(50% - 36px);
+    }
+
+    &--40 {
+      width: 40%;
+    }
+
+    &--16 {
+      width: 16%;
+    }
+
+    &--placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      font-family: $medium;
+      font-size: $smallBigText;
+      color: $darkMainColor;
+      transition: 0.5s;
+    }
+
+    &--description {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      font-family: $light;
+      font-size: $smallText2;
+      color: $darkMainColor;
+      transition: 0.5s;
+    }
+
+    &--validated {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      display: block;
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    &--input {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      padding-right: 20px;
+      margin: 0;
+      font-family: $medium;
+      font-size: $smallBigText;
+      color: $darkMainColor;
+      border: none;
+      background-color: transparent;
+
+      &::placeholder {
+        font-family: $medium;
+        font-size: $smallBigText;
+        color: $darkMainColor;
+      }
+    }
+
+    &--comment {
+      resize: none;
+
+      &_wrapper {
+        height: 187px;
+        border-right: 2px solid #000531;
+      }
+    }
+
+    &:hover {
+      border-width: 3px;
+    }
+  }
+
+  &__inputbox--active {
+    .ordering__inputbox--placeholder {
+      top: -18px;
+      font-family: $medium;
+      font-size: $extraSmallText2;
+    }
+
+    .ordering__inputbox--description {
+      opacity: 0;
+    }
+  }
+
+  &__inputbox--valid {
+    .ordering__inputbox--validated {
+      opacity: 1;
+    }
+  }
+
+  &__inputbox--error {
+    border-color: $red;
+  }
+
+  &__block__func_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    max-width: 1010px;
+    margin: 0 auto;
+    font-family: $bold;
+    font-size: $bigText4;
+    color: $darkMainColor;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      display: block;
+      box-sizing: border-box;
+      height: 63px;
+      width: 63px;
+      background: center / auto url(../img/funcArrowOff.svg) no-repeat;
+      border-radius: 50%;
+      border: 1px solid $darkMain;
+    }
+
+    &:hover {
+      &:after {
+        background-image: url(../img/funcArrowOn.svg);
+        border-width: 2px;
+      }
+    }
+
+    &--active {
+      &:after {
+        background-image: url(../img/funcArrowOn.svg);
+        background-color: $brightLightMain;
+        border-color: $brightLightMain;
+        border-width: 2px;
+      }
+    }
+  }
+
+  &__block__func_wrapper {
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__block__func_content {
+    display: none;
+    width: 98%;
+    max-width: 1010px;
+    padding-top: 50px;
+    margin: 40px auto 0;
+    border-top: 1px solid $darkMain;
+
+    &__search {
+      width: 100%;
+      max-width: 100%;
+      padding-bottom: 50px;
+      border-top: 1px solid $darkMain;
+      border-bottom: 1px solid $darkMain;
+    }
+  }
+
+  &__price {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+
+    &_title {
+      display: block;
+      font-family: $medium;
+      font-size: $normalText2;
+      color: $darkMainColor;
+    }
+
+    &_pay {
+      display: block;
+      font-family: $bold;
+      font-size: $bigText4;
+      color: $darkMain;
+    }
+  }
+
+  &__radio_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+
+    & + & {
+      margin-top: 20px;
+    }
+
+    &__title {
+      display: block;
+      margin-bottom: 5px;
+      font-family: $bold;
+      font-size: $bigText3;
+      color: $darkMainColor;
+    }
+
+    &__subtitle {
+      display: block;
+      font-family: $medium;
+      font-size: $normalText;
+      color: $darkMain;
+    }
+
+    &__input_wrapper {
+      position: relative;
+      width: 63px;
+      height: 63px;
+    }
+
+    &__input {
+      display: none;
+
+      &:checked + .ordering__radio_btn__b {
+        background-color: $brightLightMain;
+        border-color: $brightLightMain;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          height: 16px;
+          width: 16px;
+          margin-top: -8px;
+          margin-left: -8px;
+          border-radius: 50%;
+          background-color: $darkMain;
+        }
+      }
+    }
+
+    &__b {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      height: 63px;
+      width: 63px;
+      border: 1px solid $darkMain;
+      border-radius: 50%;
+    }
+  }
+
+  &__block__order {
+    box-sizing: border-box;
+    padding-top: 90px;
+    padding-bottom: 160px;
+    border-top: 1px solid $darkMain;
+  }
+
+  &_bay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+
+    &__subtitle {
+      display: block;
+      margin-bottom: 5px;
+      font-family: $medium;
+      font-size: $normalText2;
+      color: $darkMainColor;
+    }
+
+    &__title {
+      display: block;
+      font-family: $bold;
+      font-size: $extraBigText3;
+      color: $darkMain;
+    }
+
+    .card_product__inbasket_btn {
+      width: 70%;
+    }
+  }
+}

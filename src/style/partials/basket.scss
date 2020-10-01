@@ -1,0 +1,44 @@
+.basketPage {
+  &__content {
+    padding: 80px 0;
+  }
+
+  .products__favorites {
+    margin-right: 4%;
+  }
+
+  &__info {
+    padding: 90px 0 160px;
+    border-bottom: 1px solid $darkMain;
+
+    .container {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__sum {
+      display: block;
+      width: 27.9%;
+      max-width: 536px;
+      margin: 0 auto;
+      font-family: $medium;
+      font-size: $normalText2;
+      color: $darkMainColor;
+    }
+
+    &__price {
+      display: block;
+      margin-left: auto;
+      font-family: $bold;
+      font-size: $extraBigText3;
+      color: $darkMain;
+    }
+
+    .card_product__inbasket_btn {
+      max-width: 266px;
+      margin-left: 56px;
+    }
+  }
+}

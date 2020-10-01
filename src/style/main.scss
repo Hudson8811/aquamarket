@@ -8,10 +8,14 @@
 // МОИ СТИЛИ
 @import 'partials/common/vars.scss';
 @import 'partials/common/commonStyles.scss';
+@import 'partials/common/popup.scss';
 @import 'partials/footer/footer.scss';
 @import 'partials/header/header.scss';
+@import 'partials/header/headerOrdering.scss';
 @import 'partials/mainPage.scss';
 @import 'partials/category.scss';
 @import 'partials/catalog.scss';
 @import 'partials/favorites.scss';
 @import 'partials/cardProduct.scss';
+@import 'partials/basket.scss';
+@import 'partials/ordering.scss';

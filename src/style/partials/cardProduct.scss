@@ -1,6 +1,6 @@
 .card_product {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-content: flex-start;
 
   &__wrapper {
@@ -10,7 +10,7 @@
   &__slider_wrapper {
     position: relative;
     box-sizing: border-box;
-    width: 50%;
+    width: calc(50% - 54px);
     padding: 68px 82px 0 78px;
     border-top: 1px solid $darkMain;
   }
@@ -91,8 +91,7 @@
 
   &__content {
     box-sizing: border-box;
-    width: 50%;
-    padding-left: 54px;
+    width: calc(50% - 54px);
 
     .bread_crumbs {
       margin-bottom: 50px;
@@ -128,6 +127,188 @@
   &__parametrs {
     .favorites__counts {
       margin-bottom: 0;
+    }
+  }
+
+  &__parametrs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  &__price {
+    text-align: right;
+    display: block;
+    box-sizing: border-box;
+    width: 27.1%;
+    border-bottom: 1px solid $darkMain;
+    font-family: $bold;
+    font-size: $bigText4;
+    color: $darkMain;
+  }
+
+  &__popup_btn {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    width: 26%;
+    margin: 0 0.467% 0 auto;
+    font-family: $semiBold;
+    font-size: $normalText;
+    text-decoration: none;
+    color: $darkMainColor;
+    background-color: $lineDarker;
+    border-radius: 555px;
+    border: 2px solid $lineDarker;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: $lightMain;
+      border-color: $darkMainColor;
+    }
+  }
+
+  &__inbasket_btn {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    width: 21%;
+    font-family: $bold;
+    font-size: $smallBigText;
+    text-decoration: none;
+    color: $darkMainColor;
+    background-color: $brightLightMain;
+    border-radius: 55px;
+    transition: 0.5s;
+
+    &--big {
+      width: calc(50% - 29px);
+      margin-left: auto;
+    }
+
+    &:hover {
+      color: $lightMain;
+      background-color: $darkMainColor;
+    }
+  }
+
+  &__send {
+    &__wrapper {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+      padding-right: 29px;
+      padding-bottom: 28px;
+      margin: 70px 0;
+      border-bottom: 1px solid $darkMain;
+
+      & + & {
+        padding-right: 0;
+        padding-left: 29px;
+      }
+    }
+
+    &__when {
+      font-family: $light;
+      font-size: $smallText2;
+      color: $darkMain;
+    }
+
+    &__date {
+      font-family: $medium;
+      font-size: smallText2;
+      color: $darkMain;
+    }
+  }
+
+  &__specifications {
+    box-sizing: border-box;
+    width: calc(50% - 29px);
+    padding-bottom: 35px;
+    list-style: none;
+
+    &:nth-last-child(2) {
+      border-bottom: 1px solid $darkMain;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & + li {
+        margin-top: 35px;
+      }
+    }
+
+    & + & {
+      margin-left: auto;
+    }
+
+    &__heading {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      padding-bottom: 35px;
+      border-bottom: 1px solid $darkMain;
+      font-family: $bold;
+      font-size: $bigText;
+      color: $darkMainColor;
+    }
+
+    &__name {
+      font-family: $medium;
+      font-size: $normalText2;
+      color: $darkMainColor;
+    }
+
+    &__value {
+      font-family: $bold;
+      font-size: $normalText2;
+      text-decoration: none;
+      color: $darkMainColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__details {
+      font-family: $medium;
+      font-size: $normalText;
+      color: $darkMainColor;
+    }
+  }
+
+  &__catalog {
+    margin-top: 260px;
+
+    &_heading {
+      display: block;
+      text-align: center;
+      margin-bottom: 70px;
+      font-family: $bold;
+      font-size: $extraBigText2;
+      color: $darkMainColor;
+    }
+
+    &_content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin-bottom: -56px;
+
+      .products__item {
+        width: 25%;
+      }
     }
   }
 }

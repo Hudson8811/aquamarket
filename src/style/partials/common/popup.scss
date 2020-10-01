@@ -1,0 +1,112 @@
+.call_popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 60px 50px 60px 0;
+  background-color: $lightMain;
+  transition: 0.5s;
+  transform: translateY(100%);
+
+  &__remove_btn {
+    position: relative;
+    height: 28px;
+    width: 28px;
+    margin: 0 auto;
+    text-decoration: none;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 28px;
+      height: 1px;
+      background-color: $darkMain;
+      transform-origin: center;
+      cursor: pointer;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        height: 3px;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    max-width: 334px;
+    margin: 0 auto 0 0;
+    font-family: $bold;
+    font-size: $bigText4;
+    color: $darkMain;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 50%;
+  }
+
+  &__phone {
+    display: block;
+    box-sizing: border-box;
+    width: 49%;
+    max-width: 400px;
+    padding: 20px 0;
+    margin: 0;
+    font-family: $medium;
+    font-size: $smallBigText;
+    color: $darkMainColor;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $darkMain;
+
+    &::placeholder {
+      font-family: $medium;
+      font-size: $smallBigText;
+      color: $darkMainColor;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    width: 49%;
+    max-width: 435px;
+    margin: 0;
+    padding: 0;
+    font-family: $bold;
+    font-size: $normalText;
+    color: $lightMain;
+    border: none;
+    background-color: $darkMain;
+    border-radius: 555px;
+    transition: 0.5s;
+
+    &:hover {
+      color: $darkMainColor;
+      background-color: $brightLightMain;
+    }
+  }
+}

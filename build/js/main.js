@@ -212,7 +212,7 @@ $(document).ready(function () {
 
   // Шапка сайта!
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 147) {
+    if ($(this).scrollTop() > 147 && !$('.header').hasClass('header__ordering')) {
       $('.header').addClass('header--fixed');
       $('.fix_cct').addClass('fix_cct--fixed');
       $('.body__overlay').addClass('body__overlay--fixed');
@@ -365,6 +365,112 @@ $(document).ready(function () {
       'card_product__small_slider__item--active',
     );
   });
-
   // Слайдер карточки товара!
+
+  // Маска телефона!
+  $('.mask--js').mask('+7 (999) 999-99-99');
+  // Маска телефона!
+
+  // Всплывающее окно обратной связи!
+  $(document).on('click', '.call__popup_btn--js', function (e) {
+    e.preventDefault();
+
+    $('.call_popup').css({
+      display: 'flex',
+    });
+
+    $('body').css({
+      overflow: 'hidden',
+    });
+
+    setTimeout(() => {
+      $('.body__overlay').addClass('active');
+      $('.header').addClass('header--overlay');
+      $('.call_popup').css({
+        transform: 'translateY(0)',
+      });
+    }, 500);
+  });
+
+  $(document).on('click', '.call_popup__remove_btn', function (e) {
+    e.preventDefault();
+    $('.call_popup').css({
+      transform: 'translateY(100%)',
+    });
+
+    setTimeout(() => {
+      $('.body__overlay').removeClass('active');
+      $('.header').removeClass('header--overlay');
+      $('body').css({
+        overflow: 'auto',
+      });
+
+      $('.call_popup').css({
+        display: 'none',
+      });
+    }, 500);
+  });
+  // Всплывающее окно обратной связи!
+
+  // Высчитываем левый отступ для basketPage__info__sum!
+  function mlForSum() {
+    if ($('main').hasClass('basketPage')) {
+      let mlDescription = $('.favorites__description').offset().left;
+      let mlContainer = $('.container').offset().left;
+      let mlSum = mlDescription - mlContainer;
+      $('.basketPage__info__sum').css({ marginLeft: `${mlSum}px` });
+    }
+  }
+
+  mlForSum();
+
+  $(window).resize(function () {
+    mlForSum();
+  });
+  // Высчитываем левый отступ для basketPage__info__sum!
+
+  // Форма!
+  $('.ordering__inputbox--input').focus(function () {
+    $(this)
+      .parent('.ordering__inputbox')
+      .removeClass('ordering__inputbox--error')
+      .addClass('ordering__inputbox--active');
+  });
+
+  $('.ordering__inputbox--input').blur(function () {
+    if ($(this).val() == '') {
+      $(this)
+        .parent('.ordering__inputbox')
+        .removeClass('ordering__inputbox--active')
+        .removeClass('ordering__inputbox--valid')
+        .addClass('ordering__inputbox--error');
+    } else {
+      $(this)
+        .parent('.ordering__inputbox')
+        .addClass('ordering__inputbox--valid')
+        .removeClass('ordering__inputbox--error');
+    }
+  });
+
+  // Форма!
+
+  // Раскрывающиеся блоки формы!
+  $('.ordering__block__func_content').slideUp();
+  $(document).on('click', '.ordering__block__func_heading', function () {
+    $(this).toggleClass('ordering__block__func_heading--active');
+    $(this).siblings('.ordering__block__func_content').slideToggle();
+  });
+  // Раскрывающиеся блоки формы!
+
+  // Селект выбора адреса доставки!
+  $(document).on('click', '.address_select__input', function () {
+    $('.address_select__link').toggleClass('address_select__link--disabled');
+    $(this).parent('.address_select').toggleClass('address_select--active');
+  });
+
+  $(document).on('click', '.address_select__content__item', function () {
+    const address = $(this).text();
+    $('.address_select__input').text(address);
+  });
+  // Селект выбора адреса доставки!
 });

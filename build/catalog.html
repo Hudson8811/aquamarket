@@ -50,7 +50,7 @@
       
             <span class="header__times"><span class="header__days">пн-вс:</span> 09.00-20.00</span>
       
-            <a href="#" class="call_btn">Заказать звонок</a>
+            <a href="#" class="call_btn call__popup_btn--js">Заказать звонок</a>
       
             <a href="#" class="personal_area">
               <span>Личный кабинет</span>
@@ -1023,6 +1023,17 @@
           </div>
       </footer>
     </div>
+
+    <div class="call_popup">
+      <a href="#" class="call_popup__remove_btn"> </a>
+      <span class="call_popup__title">Перезвоним <span class="nowrap">в течении 5-ти минут</span></span>
+    
+      <form class="call_popup__form">
+        <input type="text" class="call_popup__phone mask--js" placeholder="+7 (___) ___-__-__" />
+        <button class="call_popup__submit">Купить в 1 клик!</button>
+      </form>
+    </div>
+    
     <script src="js/main.js"></script>
   </body>
 </html>
