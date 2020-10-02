@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Личный кабинет</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper persona__page">
+      <header class="header">
+        <nav class="header__top_menu">
+          <div class="container">
+            <ul>
+              <li class="header__top_menu__item">
+                <a class="underline_link" href="#">Доставка</a> по России
+              </li>
+              <li class="header__top_menu__item">
+                <a class="underline_link" href="#">Возврат</a> и обмен 30 дней
+              </li>
+              <li class="header__top_menu__item">
+                <a class="underline_link" href="#">Гарантия</a> 1-3 года
+              </li>
+              <li class="header__top_menu__item">
+                <a class="underline_link" href="#">Скидки</a> от 3% до 50%
+              </li>
+            </ul>
+          </div>
+        </nav>
+      
+        <div class="container header__info_block__wrapper">
+          <nav class="header__info_block">
+            <a class="header__logo" href="#">
+              <img src="img/mainLogo.svg" alt="logo" />
+            </a>
+      
+            <a href="#" class="header__market">Магазин сантехники</a>
+      
+            <div class="header__phone_block">
+              <a class="header__phone_link" href="tel:+7 (495) 769 86 28">+7 (495) 769 86 28</a>
+              <div class="header__phone_hover">
+                <span class="header__city">Москва</span>
+                <a class="header__mail" href="mailto:info@aquamarket.su">info@aquamarket.su</a>
+              </div>
+            </div>
+      
+            <span class="header__times"><span class="header__days">пн-вс:</span> 09.00-20.00</span>
+      
+            <a href="#" class="call_btn call__popup_btn--js">Заказать звонок</a>
+      
+            <a href="#" class="personal_area">
+              <span>Личный кабинет</span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="9" cy="6" r="5" stroke="black" stroke-width="2" />
+                <path
+                  d="M17.5716 16.8494C16.704 15.4057 15.4858 14.2044 14.03 13.3571C12.5742 12.5099 10.928 12.0441 9.24411 12.003C7.56023 11.9619 5.89323 12.3468 4.39782 13.1219C2.90241 13.8971 1.62703 15.0375 0.69004 16.4372L2.35203 17.5498C3.10162 16.43 4.12192 15.5177 5.31825 14.8976C6.51459 14.2774 7.84818 13.9695 9.19529 14.0024C10.5424 14.0353 11.8594 14.4079 13.024 15.0857C14.1887 15.7635 15.1632 16.7245 15.8573 17.8796L17.5716 16.8494Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      
+        <div class="container header__bottom_block__wrapper">
+          <div class="header__bottom_block">
+            <a href="#" class="catalog_btn">Каталог</a>
+            <div class="search__block">
+              <input type="text" name="search" id="search" class="search__input" placeholder="Я ищу.." />
+            </div>
+      
+            <a href="#" class="favorites">
+              <span>Избранное</span>
+              <svg
+                width="22"
+                height="20"
+                viewBox="0 0 22 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.0203 10.436L19.8663 10.612L11 19.3L2.13373 10.612L1.97967 10.436C0.970424 9.28303 0.444511 7.80084 0.504642 6.28657C0.564775 4.77227 1.2067 3.33416 2.30481 2.26106C3.40321 1.18768 4.87692 0.559055 6.43119 0.503953C7.98548 0.44885 9.50209 0.971495 10.6773 1.96469L11 2.23746L11.3227 1.96469C12.4979 0.971495 14.0145 0.44885 15.5688 0.503953C17.1231 0.559055 18.5968 1.18768 19.6952 2.26106C20.7933 3.33416 21.4352 4.77227 21.4954 6.28657C21.5555 7.80084 21.0296 9.28303 20.0203 10.436Z"
+                  stroke="black"
+                />
+              </svg>
+            </a>
+      
+            <div class="header__bottom_block__border_line"></div>
+      
+            <a href="#" class="basket">
+              <span>Корзина</span>
+              <svg
+                width="24"
+                height="23"
+                viewBox="0 0 24 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.64017 18.6C8.42511 18.6 7.43096 19.59 7.43096 20.8C7.43096 22.01 8.42511 23 9.64017 23C10.8552 23 11.8494 22.01 11.8494 20.8C11.8494 19.59 10.8552 18.6 9.64017 18.6ZM0 0V2.2H3.21339L7.18996 10.56L4.01674 16.5C4.01674 16.5 6.41674 16.5 7.6318 16.5H20.887V14.3H7.69132L8.84686 12.1H19.0293L24 2.2H5.64351L4.64937 0H0ZM16.6695 18.6C15.4544 18.6 14.4603 19.59 14.4603 20.8C14.4603 22.01 15.4544 23 16.6695 23C17.8845 23 18.8787 22.01 18.8787 20.8C18.8787 19.59 17.8845 18.6 16.6695 18.6Z"
+                  fill="#000531"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="body__overlay"></div>
+
+      <nav class="fix_cct">
+        <ul class="fix_cct__list">
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Сантехника</span></a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link">
+              <span>Трубы</span> для воды и отопления
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Фитинги</span> для труб</a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Канализация</span></a>
+
+            <ul class="fix_cct__sublist">
+              <li><a href="#" class="sidebar__main__link">Канализационные трубы</a></li>
+              <li><a href="#" class="sidebar__main__link">Фасонные части для труб</a></li>
+              <li><a href="#" class="sidebar__main__link">Сифоны для ванн и душевых</a></li>
+              <li><a href="#" class="sidebar__main__link">Сифоны для умывальника и мойки</a></li>
+              <li><a href="#" class="sidebar__main__link">Трапы и душевые лотки</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Шланги</span> и гибкие подводки</a
+            >
+          </li>
+
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Коллекторы</span> и комплектующие</a
+            >
+          </li>
+        </ul>
+
+        <ul class="fix_cct__list">
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Радиаторы</span> и конвекторы</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Запорная</span> арматура</a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Регулирующая</span> арматура</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Предохранительная</span> арматура</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Защита от протечек</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Фильтры</span></a>
+          </li>
+        </ul>
+
+        <ul class="fix_cct__list">
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Насосы</span> и автоматика</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Измерительные</span> приборы</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Котлы</span> и комплектующие</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Водонагреватели</span> и бойлеры</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Мембранные</span> баки</a>
+          </li>
+        </ul>
+
+        <ul class="fix_cct__list">
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Теплоизоляция</span> и гофра</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Инструмент</span></a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Крепёж</span></a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Расходные</span> материалы</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Распродажа</span></a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main">
+        <div class="container">
+          <h1 class="section__title">Личный кабинет</h1>
+          <div class="persona__heading">
+            <a data-id="1" href="#" class="persona__heading__link persona__heading__link--active"
+              >Вход</a
+            >
+            <a data-id="2" href="#" class="persona__heading__link">Регистрация</a>
+            <a data-id="3" href="#" class="persona__heading__link">Восстановление</a>
+          </div>
+
+          <div data-id="1" class="persona__content persona__content--active">
+            <form class="ordering__form">
+              <label class="ordering__inputbox">
+                <span class="ordering__inputbox--placeholder">Е-mail:</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+
+                <b class="ordering__inputbox--validated ordering__inputbox--validated--error">
+                  <svg
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1.5 9L9 1" stroke="black" />
+                    <path d="M8.5 9L1 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="email" class="ordering__inputbox--input" />
+                <span class="ordering__inputbox--wrong">
+                  <svg
+                    width="12"
+                    height="6"
+                    viewBox="0 0 12 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M6 0L0 6H12L6 0Z" fill="#FDE3E6" />
+                  </svg>
+
+                  E-mail должен содержать символ ‘@’
+                </span>
+              </label>
+
+              <label class="ordering__inputbox">
+                <span class="ordering__inputbox--placeholder">Пароль:</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="password" class="ordering__inputbox--input" />
+              </label>
+
+              <button type="submit" class="card_product__inbasket_btn">
+                Войти в личный кабинет
+              </button>
+            </form>
+          </div>
+
+          <div data-id="2" class="persona__content">
+            <form class="ordering__form">
+              <label class="ordering__inputbox">
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+                <input
+                  type="text"
+                  placeholder="+7 (___) ___-__-__"
+                  class="ordering__inputbox--input mask--js"
+                />
+              </label>
+
+              <label class="ordering__inputbox">
+                <span class="ordering__inputbox--placeholder">Е-mail:</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+
+                <b class="ordering__inputbox--validated ordering__inputbox--validated--error">
+                  <svg
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1.5 9L9 1" stroke="black" />
+                    <path d="M8.5 9L1 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="email" class="ordering__inputbox--input" />
+                <span class="ordering__inputbox--wrong">
+                  <svg
+                    width="12"
+                    height="6"
+                    viewBox="0 0 12 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M6 0L0 6H12L6 0Z" fill="#FDE3E6" />
+                  </svg>
+
+                  E-mail должен содержать символ ‘@’
+                </span>
+              </label>
+
+              <label class="ordering__inputbox">
+                <span class="ordering__inputbox--placeholder">Пароль:</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="password" class="ordering__inputbox--input" />
+              </label>
+
+              <label class="ordering__inputbox">
+                <span class="ordering__inputbox--placeholder">Повторите пароль:</span>
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="password" class="ordering__inputbox--input" />
+              </label>
+
+              <button type="submit" class="card_product__inbasket_btn">Зарегистрироваться</button>
+
+              <p class="ordering__conf">
+                Нажимая кнопку зарегистрироваться, я подтверждаю что ознакомился и согласен
+                <span class="nowrap">
+                  с
+                  <a class="ordering__conf__link" href="#">условиями политики конфиденциальности</a>
+                </span>
+              </p>
+            </form>
+          </div>
+
+          <div data-id="3" class="persona__content">
+            <form class="ordering__form">
+              <label class="ordering__inputbox">
+                <span class="ordering__inputbox--placeholder"
+                  >Указанный при регистрации Е-mail:</span
+                >
+                <b class="ordering__inputbox--validated">
+                  <svg
+                    width="12"
+                    height="9"
+                    viewBox="0 0 12 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                  </svg>
+                </b>
+
+                <b class="ordering__inputbox--validated ordering__inputbox--validated--error">
+                  <svg
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1.5 9L9 1" stroke="black" />
+                    <path d="M8.5 9L1 1" stroke="black" />
+                  </svg>
+                </b>
+                <input type="email" class="ordering__inputbox--input" />
+                <span class="ordering__inputbox--wrong">
+                  <svg
+                    width="12"
+                    height="6"
+                    viewBox="0 0 12 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M6 0L0 6H12L6 0Z" fill="#FDE3E6" />
+                  </svg>
+
+                  E-mail должен содержать символ ‘@’
+                </span>
+              </label>
+
+              <button type="submit" class="card_product__inbasket_btn">Восстановить пароль</button>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+          <div class="container">
+              <div class="footer__menu">
+                  <div class="footer__row">
+                      <div class="footer__row__heading">
+                          <a href="#" class="header__logo">
+                              <img src="img/mainLogo.svg" alt="logo">
+                          </a>
+                      </div>
+      
+                      <span class="footer__copyright">©2007—2020</span>
+                      <a href="#" class="underline_link">Политика персональных данных</a>
+                      <a href="#" class="underline_link">Карта сайта</a>
+                  </div>
+                  <div class="footer__row">
+                      <div class="footer__row__heading">
+                          <span>Товароборот</span>
+                      </div>
+      
+                      <ul class="footer__row__content">
+                          <li><a href="#">Доставка и оплата</a></li>
+                          <li><a href="#">Обмен и возврат</a></li>
+                          <li><a href="#">Гарантия</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer__row">
+                      <div class="footer__row__heading">
+                          <span>О AquaMarkeT</span>
+                      </div>
+      
+                      <ul class="footer__row__content">
+                          <li><a href="#">О компании</a></li>
+                          <li><a href="#">Юр. информация</a></li>
+                          <li><a href="#">Договор-оферта</a></li>
+                          <li><a href="#">Контакты</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer__row">
+                      <div class="footer__row__heading">
+                          <span>Контакты</span>
+                      </div>
+      
+                      <a class="footer__phone" href="tel:+7 (495) 769-86-28">+7 (495) 769-86-28</a>
+                      <a class="footer__mail" href="mailto:info@aquamarket.su">info@aquamarket.su</a>
+                      <a href="#" class="footer__call_btn">Заказать звонок</a>
+                  </div>
+      
+                  <div class="footer__bottom__row">
+                      <span>Принимаем к оплате:</span>
+                      <a href="#">
+                          <img src="img/pay1.png" alt="icon">
+                      </a>
+                      <a href="#">
+                          <img src="img/pay2.png" alt="icon">
+                      </a>
+                      <a href="#">
+                          <img src="img/pay3.png" alt="icon">
+                      </a>
+                      <a href="#">
+                          <img src="img/pay4.png" alt="icon">
+                      </a>
+                      <a href="#">
+                          <img src="img/pay5.png" alt="icon">
+                      </a>
+                      <a href="#">
+                          <img src="img/pay6.png" alt="icon">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </footer>
+    </div>
+
+    <div class="call_popup">
+      <a href="#" class="call_popup__remove_btn"> </a>
+      <span class="call_popup__title">Перезвоним <span class="nowrap">в течении 5-ти минут</span></span>
+    
+      <form class="call_popup__form">
+        <input type="text" class="call_popup__phone mask--js" placeholder="+7 (___) ___-__-__" />
+        <button class="call_popup__submit">Купить в 1 клик!</button>
+      </form>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

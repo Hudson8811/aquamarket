@@ -430,6 +430,7 @@ $(document).ready(function () {
   // Высчитываем левый отступ для basketPage__info__sum!
 
   // Форма!
+
   $('.ordering__inputbox--input').focus(function () {
     $(this)
       .parent('.ordering__inputbox')
@@ -443,7 +444,20 @@ $(document).ready(function () {
         .parent('.ordering__inputbox')
         .removeClass('ordering__inputbox--active')
         .removeClass('ordering__inputbox--valid')
+        .removeClass('ordering__inputbox--errorEmail')
         .addClass('ordering__inputbox--error');
+    } else if ($(this).attr('type') == 'email' && !$(this).val().includes('@')) {
+      $(this)
+        .parent('.ordering__inputbox')
+        .addClass('ordering__inputbox--errorEmail')
+        .removeClass('ordering__inputbox--valid');
+      return;
+    } else if ($(this).attr('type') == 'email' && $(this).val().includes('@')) {
+      $(this)
+        .parent('.ordering__inputbox')
+        .removeClass('ordering__inputbox--errorEmail')
+        .addClass('ordering__inputbox--valid');
+      return;
     } else {
       $(this)
         .parent('.ordering__inputbox')
@@ -473,4 +487,71 @@ $(document).ready(function () {
     $('.address_select__input').text(address);
   });
   // Селект выбора адреса доставки!
+
+  // Табы личного кабинета!
+  $(document).on('click', '.persona__heading__link', function (e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass('persona__heading__link--active')) {
+      const idPersonaLink = $(this).data('id');
+      $('.persona__heading__link').removeClass('persona__heading__link--active');
+      $('.persona__content').removeClass('persona__content--active');
+      $(this).addClass('persona__heading__link--active');
+      $(`.persona__content[data-id="${idPersonaLink}"]`).addClass('persona__content--active');
+    }
+  });
+  // Табы личного кабинета!
+
+  // Счетчик sendAgain__btn!
+  function againCount(time, item) {
+    $(`${item}`).text(time);
+
+    setInterval(() => {
+      let time = $(`${item}`).text();
+
+      if (time == 0) {
+        return;
+      }
+
+      time--;
+      $(`${item}`).text(time);
+    }, 1000);
+  }
+
+  againCount(60, '.sendAgain__btn--count');
+  // Счетчик sendAgain__btn!
+
+  // Редактирование адреса!
+  $(document).on('click', '.edit', function (e) {
+    e.preventDefault();
+    $(this).addClass('edit--disabled');
+    $(this).siblings('.edit--ok').addClass('edit--ok--active');
+    $(this)
+      .siblings('.ordering__radio_btn__heading')
+      .css({
+        pointerEvents: 'auto',
+      })
+      .focus();
+  });
+
+  $(document).on('click', '.edit--ok', function (e) {
+    e.preventDefault();
+    $(this).removeClass('edit--ok--active');
+    $(this).siblings('.edit').removeClass('edit--disabled');
+    $(this)
+      .siblings('.ordering__radio_btn__heading')
+      .css({
+        pointerEvents: 'none',
+      })
+      .blur();
+  });
+
+  $('.favorites__remove').click(function (e) {
+    e.preventDefault();
+    $(this).parents('.persona__adress_block').remove();
+    if ($('.persona__adress_block').length < 2) {
+      $('.persona__adress_block').removeClass('persona__adress_block--50');
+    }
+  });
+  // Редактирование адреса!
 });

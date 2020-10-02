@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Личный кабинет</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper persona__page persona__page__SignIn">
+      //= common/header
+
+      <div class="body__overlay"></div>
+
+      <nav class="fix_cct">
+        <ul class="fix_cct__list">
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Сантехника</span></a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link">
+              <span>Трубы</span> для воды и отопления
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Фитинги</span> для труб</a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Канализация</span></a>
+
+            <ul class="fix_cct__sublist">
+              <li><a href="#" class="sidebar__main__link">Канализационные трубы</a></li>
+              <li><a href="#" class="sidebar__main__link">Фасонные части для труб</a></li>
+              <li><a href="#" class="sidebar__main__link">Сифоны для ванн и душевых</a></li>
+              <li><a href="#" class="sidebar__main__link">Сифоны для умывальника и мойки</a></li>
+              <li><a href="#" class="sidebar__main__link">Трапы и душевые лотки</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Шланги</span> и гибкие подводки</a
+            >
+          </li>
+
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Коллекторы</span> и комплектующие</a
+            >
+          </li>
+        </ul>
+
+        <ul class="fix_cct__list">
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Радиаторы</span> и конвекторы</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Запорная</span> арматура</a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Регулирующая</span> арматура</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Предохранительная</span> арматура</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Защита от протечек</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Фильтры</span></a>
+          </li>
+        </ul>
+
+        <ul class="fix_cct__list">
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Насосы</span> и автоматика</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Измерительные</span> приборы</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Котлы</span> и комплектующие</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Водонагреватели</span> и бойлеры</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Мембранные</span> баки</a>
+          </li>
+        </ul>
+
+        <ul class="fix_cct__list">
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Теплоизоляция</span> и гофра</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Инструмент</span></a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Крепёж</span></a>
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"
+              ><span>Расходные</span> материалы</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar__main__link fix_cct__link"><span>Распродажа</span></a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main">
+        <div class="container">
+          <h1 class="section__title">Личный кабинет</h1>
+          <div class="persona__heading">
+            <a data-id="4" href="#" class="persona__heading__link persona__heading__link--active">
+              История заказов
+            </a>
+            <a data-id="5" href="#" class="persona__heading__link">Личные данные</a>
+          </div>
+        </div>
+
+        <div data-id="4" class="persona__content persona__content--active">
+          <div class="container">
+            <div class="order_table">
+              <div class="order_table__row order_table__row__heading">
+                <div class="order_table__col">№</div>
+                <div class="order_table__col">Дата</div>
+                <div class="order_table__col">Сумма</div>
+                <div class="order_table__col">Статус</div>
+              </div>
+
+              <div class="order_table__row">
+                <div class="order_table__col">12345</div>
+                <div class="order_table__col">27 сен. 2017</div>
+                <div class="order_table__col">150 350 ₽</div>
+                <div class="order_table__col order_table__col--completed">Выполнен</div>
+              </div>
+
+              <div class="order_table__row">
+                <div class="order_table__col">12345</div>
+                <div class="order_table__col">2 мая 2020</div>
+                <div class="order_table__col">250 ₽</div>
+                <div class="order_table__col order_table__col--canceled">Отменен</div>
+              </div>
+
+              <div class="order_table__row">
+                <div class="order_table__col">12345</div>
+                <div class="order_table__col">27 сен. 2017</div>
+                <div class="order_table__col">150 350 ₽</div>
+                <div class="order_table__col order_table__col--inProcess">Обрабатываем..</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-id="5" class="persona__content">
+          <div class="persona__signInBlock">
+            <span class="persona__signInBlock__title">Персональная информация</span>
+            <div class="container">
+              <form class="ordering__form">
+                <label class="ordering__inputbox ordering__inputbox--25">
+                  <span class="ordering__inputbox--placeholder">Фамилия:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="text" class="ordering__inputbox--input" />
+                </label>
+                <label class="ordering__inputbox ordering__inputbox--25">
+                  <span class="ordering__inputbox--placeholder">Имя:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="text" class="ordering__inputbox--input" />
+                </label>
+                <label class="ordering__inputbox ordering__inputbox--25">
+                  <span class="ordering__inputbox--placeholder">Телефон:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="text" class="ordering__inputbox--input mask--js" />
+                </label>
+                <label class="ordering__inputbox ordering__inputbox--25">
+                  <span class="ordering__inputbox--placeholder">Е-mail:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+
+                  <b class="ordering__inputbox--validated ordering__inputbox--validated--error">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1.5 9L9 1" stroke="black" />
+                      <path d="M8.5 9L1 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="email" class="ordering__inputbox--input" />
+                  <span class="ordering__inputbox--wrong">
+                    <svg
+                      width="12"
+                      height="6"
+                      viewBox="0 0 12 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M6 0L0 6H12L6 0Z" fill="#FDE3E6" />
+                    </svg>
+
+                    E-mail должен содержать символ ‘@’
+                  </span>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="persona__signInBlock">
+            <span class="persona__signInBlock__title">Сменить пароль</span>
+            <div class="container">
+              <form class="ordering__form">
+                <label class="ordering__inputbox ordering__inputbox--25">
+                  <span class="ordering__inputbox--placeholder">Старый пароль:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="password" class="ordering__inputbox--input" />
+                </label>
+                <label class="ordering__inputbox ordering__inputbox--25">
+                  <span class="ordering__inputbox--placeholder">Новый пароль:</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+                  <input type="password" class="ordering__inputbox--input" />
+                </label>
+
+                <label class="ordering__inputbox ordering__inputbox--25">
+                  <span class="ordering__inputbox--placeholder">Повторите новый пароль</span>
+                  <b class="ordering__inputbox--validated">
+                    <svg
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 4.77778L4.5 8L11 1" stroke="black" />
+                    </svg>
+                  </b>
+
+                  <input type="password" class="ordering__inputbox--input" />
+                </label>
+
+                <button class="sendAgain__btn sendAgain__btn--25">Сменить пароль</button>
+              </form>
+            </div>
+          </div>
+          <div class="persona__signInBlock">
+            <span class="persona__signInBlock__title">Мои адреса</span>
+            <div class="container">
+              <form class="ordering__form">
+                <div class="persona__adress_block persona__adress_block--50">
+                  <label class="ordering__radio_btn">
+                    <div class="ordering__radio_btn__input_wrapper">
+                      <input class="ordering__radio_btn__input" type="radio" name="pay" id="1" />
+                      <b class="ordering__radio_btn__b"></b>
+                    </div>
+                  </label>
+                    <input type="text" value="Москва, ул. Рудневка д. 7 кв. 250" class="ordering__radio_btn__heading"></input >
+                    <a href="#" class="edit">
+                      <svg
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.637377 26.3626L2.42424 17.4283L19.1455 0.707107L26.2929 7.85455L9.57168 24.5758L0.637377 26.3626Z"
+                          stroke="black"
+                        />
+                        <line x1="5.64645" y1="21.6464" x2="11.6464" y2="15.6464" stroke="black" />
+                      </svg>
+                    </a>
+                    <a href="#" class="edit--ok"
+                      ><svg
+                        width="31"
+                        height="23"
+                        viewBox="0 0 31 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M1 12.3333L11.15 22L30 1" stroke="black" />
+                      </svg>
+                    </a>
+                    <a href="#" class="favorites__remove">Удалить</a>
+                </div>
+                <div class="persona__adress_block persona__adress_block--50">
+                  <label class="ordering__radio_btn">
+                    <div class="ordering__radio_btn__input_wrapper">
+                      <input class="ordering__radio_btn__input" type="radio" name="pay" id="1" />
+                      <b class="ordering__radio_btn__b"></b>
+                    </div>
+                  </label>
+                    <input type="text" value="Москва, ул. Рудневка д. 7 кв. 250" class="ordering__radio_btn__heading"></input >
+                    <a href="#" class="edit">
+                      <svg
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.637377 26.3626L2.42424 17.4283L19.1455 0.707107L26.2929 7.85455L9.57168 24.5758L0.637377 26.3626Z"
+                          stroke="black"
+                        />
+                        <line x1="5.64645" y1="21.6464" x2="11.6464" y2="15.6464" stroke="black" />
+                      </svg>
+                    </a>
+                    <a href="#" class="edit--ok"
+                      ><svg
+                        width="31"
+                        height="23"
+                        viewBox="0 0 31 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M1 12.3333L11.15 22L30 1" stroke="black" />
+                      </svg>
+                    </a>
+                    <a href="#" class="favorites__remove">Удалить</a>
+                </div>
+                <div class="persona__adress_block persona__adress_block--50">
+                  <label class="ordering__radio_btn">
+                    <div class="ordering__radio_btn__input_wrapper">
+                      <input class="ordering__radio_btn__input" type="radio" name="pay" id="1" />
+                      <b class="ordering__radio_btn__b"></b>
+                    </div>
+                  </label>
+                    <input type="text" value="Москва, ул. Рудневка д. 7 кв. 250" class="ordering__radio_btn__heading"></input >
+                    <a href="#" class="edit">
+                      <svg
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.637377 26.3626L2.42424 17.4283L19.1455 0.707107L26.2929 7.85455L9.57168 24.5758L0.637377 26.3626Z"
+                          stroke="black"
+                        />
+                        <line x1="5.64645" y1="21.6464" x2="11.6464" y2="15.6464" stroke="black" />
+                      </svg>
+                    </a>
+                    <a href="#" class="edit--ok"
+                      ><svg
+                        width="31"
+                        height="23"
+                        viewBox="0 0 31 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M1 12.3333L11.15 22L30 1" stroke="black" />
+                      </svg>
+                    </a>
+                    <a href="#" class="favorites__remove">Удалить</a>
+                </div>
+                <div class="persona__adress_block persona__adress_block--50">
+                  <label class="ordering__radio_btn">
+                    <div class="ordering__radio_btn__input_wrapper">
+                      <input class="ordering__radio_btn__input" type="radio" name="pay" id="2" />
+                      <b class="ordering__radio_btn__b"></b>
+                    </div>
+                  </label>
+                    <input type="text" value="Москва, ул. Рудневка д. 7 кв. 250" class="ordering__radio_btn__heading"></input >
+                    <a href="#" class="edit">
+                      <svg
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.637377 26.3626L2.42424 17.4283L19.1455 0.707107L26.2929 7.85455L9.57168 24.5758L0.637377 26.3626Z"
+                          stroke="black"
+                        />
+                        <line x1="5.64645" y1="21.6464" x2="11.6464" y2="15.6464" stroke="black" />
+                      </svg>
+                    </a>
+                    <a href="#" class="edit--ok"
+                      ><svg
+                        width="31"
+                        height="23"
+                        viewBox="0 0 31 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M1 12.3333L11.15 22L30 1" stroke="black" />
+                      </svg>
+                    </a>
+                    <a href="#" class="favorites__remove">Удалить</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="persona__signInBlock">
+            <span class="persona__signInBlock__title">Акции и новости</span>
+            <div class="container">
+              <form class="ordering__form">
+                <label class="slideCheck">
+                  Хочу получать акции на E-mail
+
+                  <div class="slideCheck__input">
+                    <input checked type="checkbox">
+                    <b></b>
+                  </div>
+                </label>
+                <label class="slideCheck">
+                  Хочу получать акции на E-mail
+
+                  <div class="slideCheck__input">
+                    <input type="checkbox">
+                    <b></b>
+                  </div>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      //= common/footer
+    </div>
+
+    //= common/popup
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

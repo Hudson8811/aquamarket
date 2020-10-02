@@ -12,10 +12,6 @@
       position: absolute;
       top: calc(50% + 16px);
       right: 0;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -144,5 +140,9 @@
     text-decoration: none;
     color: $red;
     user-select: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -542,3 +542,125 @@ body {
     }
   }
 }
+
+.sendAgain__btn {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  width: 100%;
+  max-width: 536px;
+  margin: 40px auto 0;
+  font-family: $light;
+  font-size: $normalText;
+  text-decoration: none;
+  color: $darkMainColor;
+  background-color: transparent;
+  border: 1px dashed $darkMain;
+  border-radius: 55px;
+
+  &:hover {
+    font-family: $medium;
+    border-style: solid;
+  }
+
+  &--25 {
+    width: calc(25% - 72px * 3 / 4);
+    max-width: none;
+  }
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  &--disabled {
+    display: none;
+  }
+
+  &:hover {
+    path {
+      stroke: $darkMainColor;
+      fill: $darkMainColor;
+    }
+
+    line {
+      stroke: $lightMain;
+    }
+  }
+
+  &--ok {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      path {
+        stroke-width: 2px;
+      }
+    }
+
+    &--active {
+      display: flex;
+    }
+  }
+}
+
+.slideCheck {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $semiBold;
+  font-size: $bigText;
+  color: $darkMainColor;
+  cursor: pointer;
+
+  &__input {
+    input {
+      display: none;
+
+      &:checked + b {
+        background-color: $brightLightMain;
+        border-color: $brightLightMain;
+
+        &:before {
+          left: auto;
+          right: 19px;
+          background-color: $darkMain;
+          border-color: $darkMain;
+        }
+      }
+    }
+
+    b {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      height: 67px;
+      width: 97px;
+      padding: 19px;
+      border: 1px solid $darkMain;
+      border-radius: 55px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 19px;
+        display: block;
+        box-sizing: border-box;
+        height: 30px;
+        width: 30px;
+        margin-top: -15px;
+        border: 1px solid $darkMain;
+        border-radius: 50%;
+      }
+    }
+  }
+}

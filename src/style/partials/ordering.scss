@@ -57,6 +57,10 @@
       width: 40%;
     }
 
+    &--25 {
+      width: calc(25% - 72px * 3 / 4);
+    }
+
     &--16 {
       width: 16%;
     }
@@ -140,12 +144,43 @@
   }
 
   &__inputbox--valid {
-    .ordering__inputbox--validated {
+    .ordering__inputbox--validated:not(.ordering__inputbox--validated--error) {
       opacity: 1;
     }
   }
 
-  &__inputbox--error {
+  &__inputbox--errorEmail {
+    margin-bottom: 88px;
+
+    .ordering__inputbox--validated--error {
+      opacity: 1;
+    }
+
+    .ordering__inputbox--wrong {
+      display: block;
+    }
+  }
+
+  &__inputbox--wrong {
+    position: absolute;
+    bottom: -88px;
+    left: 0;
+    z-index: 2;
+    text-align: center;
+    display: none;
+    width: 100%;
+    padding: 25px 0;
+    font-family: $medium;
+    font-size: $smallText2;
+    color: $darkMainColor;
+    background-color: $error;
+
+    svg {
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      margin-left: -6px;
+    }
   }
 
   &__block__func_heading {
@@ -297,6 +332,12 @@
       border: 1px solid $darkMain;
       border-radius: 50%;
     }
+
+    &:hover {
+      .ordering__radio_btn__b {
+        border-width: 2px;
+      }
+    }
   }
 
   &__block__order {
@@ -330,5 +371,26 @@
     .card_product__inbasket_btn {
       width: 70%;
     }
+  }
+
+  &__conf {
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    font-family: $light;
+    font-size: $normalText;
+    color: $darkMainColor;
+
+    &:hover {
+      .ordering__conf__link {
+        font-family: $medium;
+      }
+    }
+  }
+
+  &__conf__link {
+    font-family: $light;
+    font-size: $normalText;
+    color: $darkMainColor;
   }
 }
