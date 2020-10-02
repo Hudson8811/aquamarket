@@ -1,0 +1,29 @@
+.error__page {
+  .snx {
+    background-color: $dark30;
+  }
+
+  .snx__description {
+    text-align: center;
+  }
+  .snx__btn {
+    box-sizing: border-box;
+    color: $darkMain;
+    background-color: $lightMain;
+    border: 2px solid $lightMain;
+
+    path {
+      fill: $darkMain;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      color: $lightMain;
+      background-color: transparent;
+
+      path {
+        fill: $lightMain;
+      }
+    }
+  }
+}
