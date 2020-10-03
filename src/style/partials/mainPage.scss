@@ -498,7 +498,11 @@
   }
 
   &__form {
+    display: flex;
     box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
     padding: 150px 254px 150px 206px;
     background-color: $dark30;
   }

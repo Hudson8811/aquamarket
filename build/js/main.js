@@ -554,4 +554,16 @@ $(document).ready(function () {
     }
   });
   // Редактирование адреса!
+
+  // Слайдер статьи!
+  $('.article__slider--js').slick({
+    infinite: false,
+    centerMode: true,
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: false,
+  });
+  // Слайдер статьи!
 });
