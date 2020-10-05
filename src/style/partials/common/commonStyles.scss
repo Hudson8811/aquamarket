@@ -27,6 +27,10 @@ body {
   &.active {
     display: block;
   }
+
+  @media screen and (max-width: 1620px) {
+    top: 186px;
+  }
 }
 
 .wrapper {
@@ -39,6 +43,10 @@ body {
   flex-wrap: wrap;
   min-height: 100vh;
   padding-top: 262px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 160px;
+  }
 }
 
 .main {
@@ -54,6 +62,10 @@ body {
   width: calc(100% - 80px);
   max-width: 1820px;
   margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 20px);
+  }
 }
 
 .nowrap {
@@ -114,9 +126,24 @@ body {
   border: 0.5px solid $darkMain;
   transition: 0.5s;
 
+  svg {
+    display: block;
+    margin-left: auto;
+  }
+
   &:hover {
     background-color: $brightLightMain;
     border-color: $brightLightMain;
+  }
+
+  @media screen and (max-width: 1000px) {
+    svg {
+      display: none;
+    }
+
+    span {
+      text-align: center;
+    }
   }
 }
 
@@ -172,6 +199,27 @@ body {
       background: $darkMain;
     }
   }
+
+  @media screen and (max-width: 1620px) {
+    max-width: 297px;
+    padding: 16px 42px 14px 50px;
+    font-size: $smallBigText;
+  }
+
+  @media screen and (max-width: 1000px) {
+    max-width: 256px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 38px);
+    max-width: none;
+    padding: 13px 32px;
+    font-size: $smallText;
+
+    &:after {
+      right: 26px;
+    }
+  }
 }
 
 .search {
@@ -181,6 +229,17 @@ body {
     min-height: 66px;
     width: 35%;
     margin: 0 68px;
+
+    @media screen and (max-width: 1620px) {
+      min-height: 52px;
+      margin: 0 48px;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-height: 24px;
+      width: 24px;
+      margin: 0 0 0 auto;
+    }
   }
 
   &__input {
@@ -214,6 +273,32 @@ body {
       border-right: 0;
       border-top: 0;
     }
+
+    @media screen and (max-width: 1620px) {
+      height: 52px;
+      padding: 17px 27px 17px 48px;
+      font-size: $normalText;
+    }
+
+    @media screen and (max-width: 1000px) {
+      background: calc(100% - 3px) center/auto url(../img/loop.svg) no-repeat;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 24px;
+      width: 24px;
+      padding: 24px 0 0 24px;
+      border: none;
+      background: 100% center/auto url(../img/loop.svg) no-repeat;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
   }
 }
 
@@ -223,14 +308,45 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 17%;
   max-width: 300px;
   padding-bottom: 22px;
   text-decoration: none;
   border-bottom: 0.5px solid $darkMain;
 
+  p {
+    display: none;
+  }
+
   &:hover {
     border-width: 2px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 50px;
+    max-width: none;
+    padding-bottom: 0;
+    margin-left: auto;
+    border-bottom: 0;
+
+    span {
+      display: none;
+    }
+
+    p {
+      display: block;
+      font-family: $semiBold;
+      font-size: $extraSmallText;
+      color: $darkMainColor;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    align-items: center;
+    min-height: 23px;
+    margin-top: -42px;
   }
 }
 
@@ -249,6 +365,10 @@ body {
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    right: 74px;
+  }
 }
 
 .basket {
@@ -258,6 +378,14 @@ body {
 
   &:hover {
     font-family: $bold;
+  }
+
+  @media screen and (max-width: 1000px) {
+    margin-left: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    right: 0;
   }
 }
 
@@ -662,5 +790,126 @@ body {
         border-radius: 50%;
       }
     }
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 101;
+  display: none;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100vw;
+  padding: 40px 15px 50px;
+  background-color: $lightMain;
+
+  &--active {
+    display: flex;
+  }
+
+  &__topBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 55px;
+
+    &__content {
+      width: calc(50% - 9px);
+      list-style: none;
+
+      li:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+
+    &__heading {
+      display: block;
+      box-sizing: border-box;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      font-family: $semiBold;
+      font-size: $smallText;
+      border-bottom: 1px solid $darkMain;
+    }
+
+    &__link {
+      display: block;
+      font-family: $medium;
+      font-size: $extraSmallText;
+      text-decoration: none;
+      color: $darkMainColor;
+    }
+  }
+
+  &__info {
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid $darkMain;
+
+    &__heading {
+      text-align: center;
+      display: block;
+      box-sizing: border-box;
+      padding-bottom: 25px;
+      font-family: $semiBold;
+      font-size: $normalText;
+      color: $darkMain;
+      border-bottom: 1px solid $darkMain;
+    }
+
+    a {
+      display: inline-block;
+      width: calc(50% - 9px);
+      padding-top: 25px;
+      text-decoration: none;
+    }
+
+    &__phone {
+      font-family: $semiBold;
+      font-size: $extraSmallText;
+      color: $darkMain;
+    }
+
+    &__mail {
+      margin-left: 14px;
+      font-family: $light;
+      font-size: $extraSmallText2;
+      color: $darkMain;
+    }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__link {
+      display: block;
+      margin: 0 9px;
+      font-family: $light;
+      font-size: $extraSmallText;
+      text-decoration: underline;
+      color: $darkMainColor;
+
+      & + & {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &__remove {
+    display: block;
+    margin: auto auto 0;
+    cursor: pointer;
   }
 }

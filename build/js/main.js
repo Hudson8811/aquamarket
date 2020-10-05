@@ -196,6 +196,12 @@ $(document).ready(function () {
       return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
     },
   });
+
+  $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : null;
+
+  $(window).resize(function () {
+    $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : null;
+  });
   // Инициализайия каталога брендов!
 
   // Настройка прогресс-бара!
@@ -566,4 +572,15 @@ $(document).ready(function () {
     fade: false,
   });
   // Слайдер статьи!
+
+  // Мобильное меню!
+  $(document).on('click', '.header__burger', function () {
+    $('.mobileMenu').addClass('mobileMenu--active');
+  });
+
+  $(document).on('click', '.mobileMenu__remove', function () {
+    $('.mobileMenu').removeClass('mobileMenu--active');
+  });
+
+  // Мобильное меню!
 });

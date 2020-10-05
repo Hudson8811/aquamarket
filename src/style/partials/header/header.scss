@@ -22,6 +22,10 @@
       height: 100%;
       background: $brightLightMain;
       opacity: 0.3;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -37,6 +41,33 @@
 
     .header__bottom_block__wrapper {
       padding: 10px 0;
+
+      @media screen and (max-width: 768px) {
+        padding: 5px 0;
+
+        .catalog_btn {
+          width: 112px;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        .basket,
+        .favorites {
+          top: 50%;
+          width: 42px;
+          margin-top: -11px;
+        }
+
+        .favorites {
+          right: 58px;
+        }
+
+        .search__block {
+          margin-right: 118px;
+        }
+      }
     }
 
     &:before {
@@ -44,8 +75,44 @@
     }
   }
 
+  &__burger {
+    position: relative;
+    display: none;
+    height: 9px;
+    width: 38px;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $darkMain;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin-left: calc(100% - 188px);
+    }
+  }
+
   &__top_menu {
     border-bottom: 0.5px solid $darkMain;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
 
     ul {
       position: relative;
@@ -73,6 +140,10 @@
         border-radius: 50%;
         background-color: $darkMain;
       }
+
+      @media screen and (max-width: 1620px) {
+        font-size: $extraSmallText;
+      }
     }
   }
 
@@ -83,14 +154,54 @@
     align-items: center;
     padding: 25px 0;
 
+    @media screen and (max-width: 1620px) {
+      padding: 19px 0;
+    }
+
+    @media screen and (max-width: 1000px) {
+      padding: 10px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
     .call_btn,
     .personal_area {
-      width: 100%;
+      width: 19%;
       max-width: 300px;
+
+      @media screen and (max-width: 1620px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        padding: 0 24px;
+        font-size: $extraSmallText;
+      }
+    }
+
+    .call_btn {
+      @media screen and (max-width: 768px) {
+        width: calc(100% - 141px);
+        max-width: none;
+        padding: 0 15px;
+        margin-top: 15px;
+        font-size: $extraSmallText2;
+      }
     }
 
     .personal_area {
       margin-left: 38px;
+
+      @media screen and (max-width: 1620px) {
+        width: 15.4%;
+        margin-left: 28px;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -98,10 +209,19 @@
     display: block;
     max-height: 49px;
 
+    @media screen and (max-width: 1620px) {
+      max-width: 150px;
+    }
+
     img {
       display: block;
       height: 100%;
       width: auto;
+
+      @media screen and (max-width: 1620px) {
+        height: auto;
+        width: 100%;
+      }
     }
   }
 
@@ -112,6 +232,20 @@
     font-size: $smallText;
     text-decoration: none;
     color: $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      max-width: 74px;
+      margin: 0 70px 0 40px;
+      font-size: $extraSmallText;
+    }
+
+    @media screen and (max-width: 1100px) {
+      margin: 0 auto 0 10px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
 
   &__phone {
@@ -119,6 +253,7 @@
       position: relative;
       box-sizing: border-box;
       padding: 10px 0;
+      flex-shrink: 0;
 
       &:hover {
         .header__phone_link:after {
@@ -128,6 +263,10 @@
         .header__phone_hover {
           transform: scaleY(1);
         }
+      }
+
+      @media screen and (max-width: 1000px) {
+        display: none;
       }
     }
 
@@ -155,6 +294,10 @@
         border: 0.5px solid $darkMain;
         background: center / auto url(../img/arrow.svg) no-repeat;
         transition: 0.5s;
+      }
+
+      @media screen and (max-width: 1620px) {
+        margin: 0 20px;
       }
     }
 
@@ -199,6 +342,15 @@
     margin-left: auto;
     margin-right: 107px;
     font-family: $light;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 1620px) {
+      margin-right: 38px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__days {
@@ -221,6 +373,14 @@
       width: 38px;
       border-bottom: 0.5px solid $darkMain;
       flex-shrink: 0;
+
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      align-items: center;
     }
   }
 }
