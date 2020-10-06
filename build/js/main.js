@@ -179,6 +179,17 @@ $(document).ready(function () {
     $('.categories_catalog__nodes_wrapper').removeClass('active');
     $(this).siblings('.categories_catalog__nodes_wrapper').addClass('active');
   });
+
+  $(document).on('click', '.categories_catalog__name', function (e) {
+    e.preventDefault();
+    if ($(window).width() < 769) {
+      $(this).toggleClass('categories_catalog__name--active');
+      $(this)
+        .siblings('.categories_catalog__nodes_wrapper')
+        .toggleClass('categories_catalog__nodes_wrapper--active');
+      $(this).siblings('.categories_catalog__img').toggleClass('categories_catalog__img--active');
+    }
+  });
   // Разворот каталога категорий!
 
   // Инициализайия каталога брендов!
@@ -201,6 +212,12 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : null;
+  });
+
+  $(document).on('click', '.brends_btn--mobile', function (e) {
+    e.preventDefault();
+    $(this).addClass('brends_btn--mobile--active');
+    $('.brends').addClass('brends--active');
   });
   // Инициализайия каталога брендов!
 

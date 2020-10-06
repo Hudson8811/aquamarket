@@ -31,6 +31,10 @@ body {
   @media screen and (max-width: 1620px) {
     top: 186px;
   }
+
+  @media screen and (max-width: 768px) {
+    top: 162px;
+  }
 }
 
 .wrapper {
@@ -405,12 +409,30 @@ body {
   transition: 0.5s;
   transform: translate(-100%);
 
+  @media screen and (max-width: 1620px) {
+    top: 185px;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 768px) {
+    top: 162px;
+    padding: 10px 15px 50px;
+  }
+
   &--active {
     transform: translate(0);
   }
 
   &--fixed {
     top: 78px;
+
+    @media screen and (max-width: 1620px) {
+      top: 64px;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 50px;
+    }
   }
 
   &__link.sidebar__main__link {
@@ -428,6 +450,16 @@ body {
         transform: rotate(180deg);
       }
     }
+
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: $smallText;
+
+      span {
+        font-size: $smallText;
+      }
+    }
   }
 
   &__list {
@@ -435,6 +467,19 @@ body {
     display: block;
     width: calc(25% - 75px);
     margin-right: calc((100% - (4 * (25% - 50px))) / 2);
+
+    @media screen and (max-width: 1620px) {
+      width: calc(25% - 16px);
+      margin: 0;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -454,20 +499,24 @@ body {
     &:after {
       content: '';
       position: absolute;
+      left: 25px;
       display: block;
       height: 1px;
       width: calc(100% - 50px);
       background-color: $darkMain;
+
+      @media screen and (max-width: 768px) {
+        left: 0;
+        width: 100%;
+      }
     }
 
     &:before {
       top: 0;
-      left: 25px;
     }
 
     &:after {
       bottom: 0;
-      left: 25px;
     }
 
     .sidebar__main__link {
@@ -475,6 +524,12 @@ body {
       box-sizing: border-box;
       padding: 8px 29px 8px 25px;
       font-size: $normalText;
+
+      @media screen and (max-width: 768px) {
+        font-size: $smallText;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     li + li {
