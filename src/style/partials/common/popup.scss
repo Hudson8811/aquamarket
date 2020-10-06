@@ -13,12 +13,21 @@
   transition: 0.5s;
   transform: translateY(100%);
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 35px 15px 50px;
+  }
+
   &__remove_btn {
     position: relative;
     height: 28px;
     width: 28px;
     margin: 0 auto;
     text-decoration: none;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px;
+    }
 
     &:before,
     &:after {
@@ -56,6 +65,13 @@
     font-family: $bold;
     font-size: $bigText4;
     color: $darkMain;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      width: 100%;
+      max-width: none;
+      margin-bottom: 30px;
+    }
   }
 
   &__form {
@@ -63,6 +79,11 @@
     justify-content: space-between;
     align-items: stretch;
     width: 50%;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__phone {
@@ -83,6 +104,13 @@
       font-family: $medium;
       font-size: $smallBigText;
       color: $darkMainColor;
+    }
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      width: 100%;
+      max-width: none;
+      margin-bottom: 30px;
     }
   }
 
@@ -107,6 +135,12 @@
     &:hover {
       color: $darkMainColor;
       background-color: $brightLightMain;
+    }
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      width: 100%;
+      max-width: none;
     }
   }
 }

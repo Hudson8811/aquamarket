@@ -3,8 +3,22 @@
   justify-content: space-between;
   align-content: flex-start;
 
+  @media screen and (max-width: 1050px) {
+    position: relative;
+    display: block;
+    padding-top: 80px;
+  }
+
   &__wrapper {
     padding-top: 100px;
+
+    @media screen and (max-width: 1050px) {
+      padding-top: 0;
+
+      .section__title {
+        text-align: center;
+      }
+    }
   }
 
   &__slider_wrapper {
@@ -13,6 +27,16 @@
     width: calc(50% - 54px);
     padding: 68px 82px 0 78px;
     border-top: 1px solid $darkMain;
+
+    @media screen and (max-width: 1050px) {
+      width: 100%;
+      margin-bottom: 20px;
+      border: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 30px 70px;
+    }
   }
 
   &__big_slider {
@@ -26,7 +50,12 @@
         width: 98%;
         max-width: 467px;
         margin: 0 auto;
-        object-fit: cover;
+        object-fit: contain;
+
+        @media screen and (max-width: 768px) {
+          height: 135px;
+          width: 100%;
+        }
       }
     }
   }
@@ -37,6 +66,13 @@
     left: 0;
     z-index: 3;
     max-width: 64px;
+
+    @media screen and (max-width: 768px) {
+      top: 50%;
+      left: auto;
+      right: 0;
+      margin-top: -24px;
+    }
 
     &__item {
       display: flex;
@@ -61,6 +97,24 @@
         margin: 0 auto;
         object-fit: cover;
         mix-blend-mode: multiply;
+      }
+
+      @media screen and (max-width: 768px) {
+        box-sizing: border-box;
+        min-height: 1px;
+        height: 6px;
+        width: 6px;
+        margin: 10px 0;
+        border: 1px solid $darkMainColor;
+        border-radius: 50%;
+
+        &.card_product__small_slider__item--active {
+          background-color: $darkMainColor;
+        }
+
+        img {
+          display: none;
+        }
       }
     }
   }
@@ -93,8 +147,23 @@
     box-sizing: border-box;
     width: calc(50% - 54px);
 
+    @media screen and (max-width: 1620px) {
+      width: calc(50% - 38px);
+    }
+
+    @media screen and (max-width: 1050px) {
+      width: 100%;
+    }
+
     .bread_crumbs {
       margin-bottom: 50px;
+
+      @media screen and (max-width: 1050px) {
+        position: absolute;
+        top: 0;
+        justify-content: center;
+        width: 100%;
+      }
     }
 
     .products__desc {
@@ -102,6 +171,21 @@
       justify-content: flex-start;
       align-items: center;
       margin-bottom: 33px;
+
+      @media screen and (max-width: 1620px) {
+        margin-bottom: 20px;
+      }
+
+      @media screen and (max-width: 1050px) {
+        position: absolute;
+        top: 40px;
+        justify-content: center;
+        width: 100%;
+
+        ul {
+          margin-right: 0;
+        }
+      }
     }
     .products__fp_wrapper {
       display: flex;
@@ -109,9 +193,21 @@
       align-items: center;
       margin-right: 38px;
 
+      @media screen and (max-width: 1050px) {
+        margin-right: 18px;
+
+        a:first-child {
+          display: none;
+        }
+      }
+
       a + a {
         margin-top: 0;
         margin-left: 38px;
+
+        @media screen and (max-width: 1050px) {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -122,11 +218,31 @@
     font-family: $medium;
     font-size: $bigText3;
     color: $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      margin: 15px 0 35px;
+      font-size: $smallBigText;
+    }
+
+    @media screen and (max-width: 1050px) {
+      text-align: center;
+    }
   }
 
   &__parametrs {
     .favorites__counts {
       margin-bottom: 0;
+
+      @media screen and (max-width: 1620px) {
+        width: 116px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 122px;
+        margin-top: 0;
+      }
     }
   }
 
@@ -146,6 +262,15 @@
     font-family: $bold;
     font-size: $bigText4;
     color: $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      font-size: $smallBigText2;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 127px);
+      margin-left: auto;
+    }
   }
 
   &__popup_btn {
@@ -164,6 +289,18 @@
     border-radius: 555px;
     border: 2px solid $lineDarker;
     transition: 0.5s;
+
+    @media screen and (max-width: 1620px) {
+      min-height: 62px;
+      font-size: $smallText;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-height: 58px;
+      width: calc(52% - 2px);
+      margin: 0;
+      margin-top: 30px;
+    }
 
     &:hover {
       background-color: $lightMain;
@@ -186,9 +323,26 @@
     border-radius: 55px;
     transition: 0.5s;
 
+    @media screen and (max-width: 1620px) {
+      min-height: 62px;
+      font-size: $normalText;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-height: 58px;
+      width: calc(48% - 2px);
+      margin: 0;
+      margin-left: auto;
+      margin-top: 30px;
+    }
+
     &--big {
       width: calc(50% - 29px);
       margin-left: auto;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     &:hover {
@@ -209,9 +363,25 @@
       margin: 70px 0;
       border-bottom: 1px solid $darkMain;
 
+      @media screen and (max-width: 1620px) {
+        padding-bottom: 20px;
+        margin: 60px 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-right: 0;
+        margin: 40px 0 0;
+      }
+
       & + & {
         padding-right: 0;
         padding-left: 29px;
+
+        @media screen and (max-width: 768px) {
+          padding-left: 0;
+          margin: 18px 0 55px;
+        }
       }
     }
 
@@ -219,12 +389,20 @@
       font-family: $light;
       font-size: $smallText2;
       color: $darkMain;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $smallText;
+      }
     }
 
     &__date {
       font-family: $medium;
       font-size: smallText2;
       color: $darkMain;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $smallText;
+      }
     }
   }
 
@@ -233,6 +411,10 @@
     width: calc(50% - 29px);
     padding-bottom: 35px;
     list-style: none;
+
+    @media screen and (max-width: 1620px) {
+      width: 100%;
+    }
 
     &:nth-last-child(2) {
       border-bottom: 1px solid $darkMain;
@@ -245,11 +427,19 @@
 
       & + li {
         margin-top: 35px;
+
+        @media screen and (max-width: 1620px) {
+          margin-top: 27px;
+        }
       }
     }
 
     & + & {
       margin-left: auto;
+
+      @media screen and (max-width: 1620px) {
+        margin-top: 65px;
+      }
     }
 
     &__heading {
@@ -261,12 +451,20 @@
       font-family: $bold;
       font-size: $bigText;
       color: $darkMainColor;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $smallBigText;
+      }
     }
 
     &__name {
       font-family: $medium;
       font-size: $normalText2;
       color: $darkMainColor;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $normalText;
+      }
     }
 
     &__value {
@@ -274,6 +472,10 @@
       font-size: $normalText2;
       text-decoration: none;
       color: $darkMainColor;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $normalText;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -284,11 +486,23 @@
       font-family: $medium;
       font-size: $normalText;
       color: $darkMainColor;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $smallText2;
+      }
     }
   }
 
   &__catalog {
     margin-top: 260px;
+
+    @media screen and (max-width: 1620px) {
+      margin-top: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 90px;
+    }
 
     &_heading {
       display: block;
@@ -297,17 +511,33 @@
       font-family: $bold;
       font-size: $extraBigText2;
       color: $darkMainColor;
+
+      @media screen and (max-width: 1620px) {
+        margin-bottom: 50px;
+        font-size: $extraBigText;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 40px;
+        font-size: $bigText4;
+        color: $darkMain;
+      }
     }
 
     &_content {
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: stretch;
       flex-wrap: wrap;
       margin-bottom: -56px;
 
       .products__item {
         width: 25%;
+        min-width: 305px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   }

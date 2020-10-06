@@ -5,10 +5,26 @@
     font-family: $bold;
     font-size: $GreatText;
     color: $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      font-size: $extraBigText2;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: $extraBigText3;
+    }
   }
 
   &__block {
     margin-top: 120px;
+
+    @media screen and (max-width: 1620px) {
+      margin-top: 80px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 50px;
+    }
 
     &__heading {
       text-align: center;
@@ -19,12 +35,28 @@
       font-family: $bold;
       font-size: $extraBigText;
       border-bottom: 1px solid $darkMain;
+
+      @media screen and (max-width: 1620px) {
+        padding-bottom: 40px;
+        margin-bottom: 60px;
+        font-size: $extraBigText3;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+        font-size: $smallBigText;
+      }
     }
 
     &__content {
-      width: 98%;
+      width: calc(100% - 20px);
       max-width: 1010px;
       margin: 0 auto;
+
+      @media screen and (max-width: 1620px) {
+        max-width: 714px;
+      }
     }
   }
 
@@ -45,24 +77,52 @@
     padding-bottom: 21px;
     border-bottom: 2px solid $darkMainColor;
 
+    @media screen and (max-width: 768px) {
+      height: 38px;
+    }
+
     & + & {
       margin-top: 56px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 40px;
+      }
     }
 
     &--50 {
       width: calc(50% - 36px);
+
+      @media screen and (max-width: 1620px) {
+        width: calc(50% - 26px);
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     &--40 {
       width: 40%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     &--25 {
       width: calc(25% - 72px * 3 / 4);
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     &--16 {
       width: 16%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     &--placeholder {
@@ -74,6 +134,14 @@
       font-size: $smallBigText;
       color: $darkMainColor;
       transition: 0.5s;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $normalText;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: $smallText;
+      }
     }
 
     &--description {
@@ -85,6 +153,14 @@
       font-size: $smallText2;
       color: $darkMainColor;
       transition: 0.5s;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $smallText;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: $extraSmallText3;
+      }
     }
 
     &--validated {
@@ -114,6 +190,14 @@
         font-family: $medium;
         font-size: $smallBigText;
         color: $darkMainColor;
+
+        @media screen and (max-width: 768px) {
+          font-size: $smallText;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: $smallText;
       }
     }
 
@@ -123,6 +207,10 @@
       &_wrapper {
         height: 187px;
         border-right: 2px solid #000531;
+
+        @media screen and (max-width: 768px) {
+          height: 150px;
+        }
       }
     }
 
@@ -187,7 +275,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 98%;
+    width: calc(100% - 20px);
     max-width: 1010px;
     margin: 0 auto;
     font-family: $bold;
@@ -221,6 +309,25 @@
         border-width: 2px;
       }
     }
+
+    @media screen and (max-width: 1620px) {
+      max-width: 714px;
+      font-size: $bigText;
+
+      &:after {
+        height: 44px;
+        width: 44px;
+        background-size: 8px 4px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: $normalText;
+      &:after {
+        height: 38px;
+        width: 38px;
+      }
+    }
   }
 
   &__block__func_wrapper {
@@ -231,11 +338,15 @@
 
   &__block__func_content {
     display: none;
-    width: 98%;
+    width: calc(100% - 20px);
     max-width: 1010px;
     padding-top: 50px;
     margin: 40px auto 0;
     border-top: 1px solid $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      max-width: 714px;
+    }
 
     &__search {
       width: 100%;
@@ -258,6 +369,10 @@
       font-family: $medium;
       font-size: $normalText2;
       color: $darkMainColor;
+
+      @media screen and (max-width: 768px) {
+        font-size: $smallText2;
+      }
     }
 
     &_pay {
@@ -265,6 +380,10 @@
       font-family: $bold;
       font-size: $bigText4;
       color: $darkMain;
+
+      @media screen and (max-width: 768px) {
+        font-size: $normalText2;
+      }
     }
   }
 
@@ -285,6 +404,15 @@
       font-family: $bold;
       font-size: $bigText3;
       color: $darkMainColor;
+
+      @media screen and (max-width: 1620px) {
+        margin-bottom: 2px;
+        font-size: $smallBigText2;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: $smallText2;
+      }
     }
 
     &__subtitle {
@@ -292,12 +420,30 @@
       font-family: $medium;
       font-size: $normalText;
       color: $darkMain;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $smallText;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: $extraSmallText;
+      }
     }
 
     &__input_wrapper {
       position: relative;
       width: 63px;
       height: 63px;
+
+      @media screen and (max-width: 1620px) {
+        height: 44px;
+        width: 44px;
+      }
+
+      @media screen and (max-width: 768px) {
+        height: 38px;
+        width: 38px;
+      }
     }
 
     &__input {
@@ -319,6 +465,20 @@
           margin-left: -8px;
           border-radius: 50%;
           background-color: $darkMain;
+
+          @media screen and (max-width: 1620px) {
+            height: 12px;
+            width: 12px;
+            margin-top: -6px;
+            margin-left: -6px;
+          }
+
+          @media screen and (max-width: 768px) {
+            height: 8px;
+            width: 8px;
+            margin-top: -4px;
+            margin-left: -4px;
+          }
         }
       }
     }
@@ -331,6 +491,16 @@
       width: 63px;
       border: 1px solid $darkMain;
       border-radius: 50%;
+
+      @media screen and (max-width: 1620px) {
+        height: 44px;
+        width: 44px;
+      }
+
+      @media screen and (max-width: 768px) {
+        height: 38px;
+        width: 38px;
+      }
     }
 
     &:hover {
@@ -345,6 +515,11 @@
     padding-top: 90px;
     padding-bottom: 160px;
     border-top: 1px solid $darkMain;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 35px;
+      padding-bottom: 85px;
+    }
   }
 
   &_bay {
@@ -353,12 +528,26 @@
     align-items: center;
     margin-top: 70px;
 
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin-top: 35px;
+    }
+
     &__subtitle {
       display: block;
       margin-bottom: 5px;
       font-family: $medium;
       font-size: $normalText2;
       color: $darkMainColor;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $normalText;
+      }
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size: $extraSmallText;
+      }
     }
 
     &__title {
@@ -366,10 +555,23 @@
       font-family: $bold;
       font-size: $extraBigText3;
       color: $darkMain;
+
+      @media screen and (max-width: 1620px) {
+        font-size: $smallBigText2;
+      }
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size: $normalText2;
+      }
     }
 
     .card_product__inbasket_btn {
       width: 70%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 

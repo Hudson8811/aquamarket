@@ -48,8 +48,8 @@ body {
   min-height: 100vh;
   padding-top: 262px;
 
-  @media screen and (max-width: 768px) {
-    padding-top: 160px;
+  @media screen and (max-width: 1620px) {
+    padding-top: 165px;
   }
 }
 
@@ -549,6 +549,14 @@ body {
     font-family: $light;
     font-size: $smallText;
     color: $darkMainColor;
+
+    @media screen and (max-width: 1620px) {
+      font-size: $extraSmallText;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: $extraSmallText2;
+    }
   }
 
   li + li {
@@ -561,6 +569,14 @@ body {
   font-family: $bold;
   font-size: $extraBigText2;
   color: $darkMain;
+
+  @media screen and (max-width: 1620px) {
+    font-size: $extraBigText;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: $bigText4;
+  }
 }
 
 .ui-slider-horizontal {
@@ -598,6 +614,10 @@ body {
 .castom_scroll.mCustomScrollbar {
   height: 265px;
   margin-top: 24px;
+
+  @media screen and (max-width: 1620px) {
+    height: 230px;
+  }
 
   .mCSB_dragger_bar,
   .mCSB_dragger:hover .mCSB_dragger_bar {
@@ -637,6 +657,20 @@ body {
   background-color: $brightLightMain;
   border-radius: 50%;
 
+  @media screen and (max-width: 1620px) {
+    height: 67px;
+    width: 67px;
+
+    svg {
+      display: block;
+      width: 16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
   &__count {
     display: block;
     margin-top: -5px;
@@ -644,6 +678,10 @@ body {
     font-family: $bold;
     font-size: $normalText;
     color: $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      font-size: $extraSmallText;
+    }
   }
 }
 
@@ -653,10 +691,28 @@ body {
   border-radius: 555px;
   cursor: pointer;
 
+  @media screen and (max-width: 768px) {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid $darkMain;
+
+    &.address_select--active {
+      .address_select__input {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
   &__wrapper {
-    width: 98%;
+    width: calc(100% - 20px);
     max-width: 1010px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1620px) {
+      max-width: 714px;
+    }
   }
 
   &__input {
@@ -672,6 +728,28 @@ body {
     font-size: $normalText;
     color: $darkMainColor;
     background: right 0 center / auto url(../img/arrow.svg) no-repeat;
+
+    @media screen and (max-width: 768px) {
+      position: relative;
+      width: 100%;
+      font-size: $smallText;
+      background: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        box-sizing: border-box;
+        height: 38px;
+        width: 38px;
+        margin-top: -19px;
+        border: 1px solid $darkMain;
+        border-radius: 50%;
+        background: center / auto url(../img/arrow.svg) no-repeat;
+      }
+    }
   }
 
   &__content {
@@ -683,8 +761,16 @@ body {
       font-size: $normalText;
       color: $darkMainColor;
 
+      @media screen and (max-width: 768px) {
+        font-size: $smallText;
+      }
+
       & + & {
         margin-top: 25px;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 15px;
+        }
       }
 
       &:hover {
@@ -701,6 +787,12 @@ body {
     text-decoration: none;
     color: $darkMain;
 
+    @media screen and (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      font-size: $smallText;
+    }
+
     span {
       margin-right: 15px;
       text-decoration: underline;
@@ -708,11 +800,21 @@ body {
 
     &--disabled {
       display: none;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        font-size: $smallText;
+      }
     }
   }
 
   &--active {
     border-radius: 20px;
+
+    @media screen and (max-width: 768px) {
+      border-radius: 0;
+    }
 
     .address_select__input {
       border-bottom: 1px solid $darkMain;
@@ -722,6 +824,10 @@ body {
       display: block;
       box-sizing: border-box;
       padding: 35px 34px;
+
+      @media screen and (max-width: 768px) {
+        padding: 25px 0;
+      }
     }
   }
 }

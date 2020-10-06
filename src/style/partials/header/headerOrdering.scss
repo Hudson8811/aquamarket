@@ -1,1 +1,41 @@
+.header__ordering {
+  .header__logo {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+  }
 
+  .call_btn {
+    @media screen and (max-width: 768px) {
+      width: calc(50% - 9px);
+      margin-top: 0;
+    }
+  }
+
+  .header__phone_block {
+    @media screen and (max-width: 768px) {
+      order: 1;
+      display: block;
+      width: calc(50% - 9px);
+      padding: 0;
+      margin-left: auto;
+
+      .header__phone_link {
+        justify-content: flex-end;
+        margin: 0;
+        font-size: $extraSmallText;
+
+        &:after {
+          border: none;
+          width: 10px;
+          height: 10px;
+          margin-left: 5px;
+        }
+      }
+
+      .header__phone_hover {
+        display: none;
+      }
+    }
+  }
+}

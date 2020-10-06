@@ -4,6 +4,10 @@
     display: block;
     padding-top: 50px;
 
+    @media screen and (max-width: 1620px) {
+      padding-top: 0;
+    }
+
     .section__title {
       text-align: center;
     }
@@ -12,6 +16,13 @@
       position: absolute;
       top: calc(50% + 16px);
       right: 0;
+
+      @media screen and (max-width: 1050px) {
+        position: relative;
+        text-align: center;
+        display: block;
+        margin: 10px auto 20px;
+      }
     }
   }
 
@@ -20,12 +31,41 @@
     padding: 80px 0 210px;
     border-top: 1px solid $darkMain;
     border-bottom: 1px solid $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      padding: 40px 0 120px;
+      margin-top: 60px;
+    }
+
+    @media screen and (max-width: 1050px) {
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
   }
 
   &__item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    .products__basket {
+      display: none;
+
+      @media screen and (max-width: 1050px) {
+        display: flex;
+      }
+    }
+
+    & + & {
+      @media screen and (max-width: 1620px) {
+        margin-top: 40px;
+      }
+    }
+
+    @media screen and (max-width: 1050px) {
+      display: block;
+    }
   }
 
   &__image {
@@ -34,12 +74,34 @@
     width: 150px;
     object-fit: cover;
     margin-right: auto;
+
+    @media screen and (max-width: 1620px) {
+      box-sizing: border-box;
+      width: 211px;
+      padding: 36px 52px;
+    }
+
+    @media screen and (max-width: 1050px) {
+      height: 200px;
+      width: auto;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 150px;
+    }
   }
 
   &__description {
     width: 27.9%;
     max-width: 536px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1050px) {
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__counts {
@@ -53,6 +115,11 @@
     padding-bottom: 25px;
     margin-bottom: -25px;
     border-bottom: 2px solid $darkMain;
+
+    @media screen and (max-width: 1050px) {
+      width: 100%;
+      margin: 20px auto 0;
+    }
 
     &--inFocus {
       border-width: 3px;
@@ -112,12 +179,25 @@
     font-size: $bigText4;
     color: $darkMain;
     user-select: none;
+
+    @media screen and (max-width: 1620px) {
+      font-size: $smallBigText2;
+      margin: 0 5%;
+    }
+
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
   }
 
   &__pay {
     display: block;
     margin-right: 4%;
     text-decoration: none;
+
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
 
     &:hover {
       svg {
@@ -143,6 +223,21 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @media screen and (max-width: 1050px) {
+        right: 0;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+      }
     }
   }
 }

@@ -600,4 +600,13 @@ $(document).ready(function () {
   });
 
   // Мобильное меню!
+
+  // Мобильный фильтр!
+  $(document).on('click', '.filter__mobile_btn', function (e) {
+    e.preventDefault();
+
+    $(this).toggleClass('filter__mobile_btn--active');
+    $('.products__sidebar').toggleClass('products__sidebar--active');
+  });
+  // Мобильный фильтр!
 });
