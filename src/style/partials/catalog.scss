@@ -215,7 +215,10 @@
   }
 
   &__item {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     box-sizing: border-box;
     width: 33.333%;
     padding: 34px;
@@ -258,12 +261,17 @@
 
   &__images {
     display: block;
+    width: 100%;
 
     &__item.slick-slide {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 276px;
+
+      img {
+        width: 60%;
+      }
 
       @media screen and (max-width: 1300px) {
         height: 162px;
@@ -315,6 +323,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    width: 100%;
     margin-bottom: 18px;
 
     @media screen and (max-width: 768px) {
@@ -325,8 +334,33 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      width: calc(100% - 40px);
       margin-right: auto;
       list-style: none;
+
+      li {
+        max-width: calc(33% - 20px / 3);
+
+        &:not(:first-child) {
+          a,
+          span {
+            padding-left: 8px;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              display: block;
+              width: 4px;
+              height: 4px;
+              margin-top: -2px;
+              border-radius: 50%;
+              background-color: $darkMain;
+            }
+          }
+        }
+      }
 
       li + li {
         margin-left: 10px;
@@ -342,8 +376,14 @@
 
       a,
       span {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
         font-size: $smallText2;
         color: $darkMain;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         @media screen and (max-width: 1620px) {
           font-size: $smallText;
@@ -389,6 +429,7 @@
 
   &__title {
     display: block;
+    width: 100%;
     margin-bottom: 15px;
     font-family: $bold;
     font-size: $smallBigText2;
@@ -411,6 +452,8 @@
 
   &__subtitle {
     display: block;
+    width: 100%;
+    margin-bottom: auto;
     font-family: $light;
     font-size: $normalText;
     color: $darkMain;
@@ -429,6 +472,7 @@
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     min-height: 60px;
     padding: 0 33px;
     margin-top: 40px;

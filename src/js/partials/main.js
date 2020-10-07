@@ -587,7 +587,27 @@ $(document).ready(function () {
   });
   // Поиск!
 
-  // Защита почты!
+  // Загрузка каталога!
+  $('.categories_catalog__item:nth-child(n + 7)').addClass('categories_catalog__item--disabled');
+  $(document).on('click', '.more_categories_btn--js', function (e) {
+    e.preventDefault();
+    $('.categories_catalog__item').removeClass('categories_catalog__item--disabled');
+  });
+  // Загрузка каталога!
 
-  // Защита почты!
+  // Всплывающая корзина!
+  $('.basket').hover(function () {
+    $('.basket__hover').addClass('basket__hover--active');
+    $('.body__overlay').addClass('active');
+    $('.header').addClass('header--overlay');
+    $('.sidebar').addClass('sidebar--overlay');
+  });
+
+  $('.basket__hover').mouseleave(function () {
+    $('.basket__hover').removeClass('basket__hover--active');
+    $('.body__overlay').removeClass('active');
+    $('.header').removeClass('header--overlay');
+    $('.sidebar').removeClass('sidebar--overlay');
+  });
+  // Всплывающая корзина!
 });
