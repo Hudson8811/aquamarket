@@ -142,6 +142,7 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).toggleClass('catalog_btn--active');
     $('.body__overlay').toggleClass('active');
+    $('.sidebar').toggleClass('sidebar--overlay');
     $('.header').toggleClass('header--overlay').toggleClass('header--active_catalog');
     $('.fix_cct').toggleClass('fix_cct--active');
   });
@@ -478,6 +479,12 @@ $(document).ready(function () {
     arrows: false,
     fade: false,
   });
+
+  $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : null;
+
+  $(window).resize(function () {
+    $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : null;
+  });
   // Слайдер статьи!
 
   // Мобильное меню!
@@ -499,4 +506,88 @@ $(document).ready(function () {
     $('.products__sidebar').toggleClass('products__sidebar--active');
   });
   // Мобильный фильтр!
+
+  // Поиск!
+  $(document).on('focus', '.search__input', function () {
+    $(this).addClass('search__input--active');
+    $('.search__block').addClass('search__block--active');
+    $('.body__overlay').addClass('active');
+    $('.header').addClass('header--overlay');
+    $('.sidebar').addClass('sidebar--overlay');
+  });
+
+  $(document).on('input', '.search__input', function () {
+    let searchValue = $('.search__input').val().trim();
+
+    let searchItems = document.querySelectorAll('.search__link_wrap .sidebar__side__link');
+    let searchItems2 = document.querySelectorAll('.search__item');
+
+    if (searchValue != '') {
+      $('.search').addClass('search--active');
+
+      searchItems.forEach(function (element) {
+        if (element.innerText.search(searchValue) == -1) {
+          $(element).removeClass('sidebar__side__link--active');
+        } else {
+          $(element).addClass('sidebar__side__link--active');
+        }
+      });
+
+      searchItems2.forEach(function (element) {
+        if (element.innerText.search(searchValue) == -1) {
+          $(element).removeClass('search__item--active');
+        } else {
+          $(element).addClass('search__item--active');
+        }
+      });
+
+      if ($('.sidebar__side__link--active').length > 0 || $('.search__item--active').length > 0) {
+        let searchCount = $('.search__item--active').length;
+        $('.search__all_btn').addClass('search__all_btn--active');
+        $('.search__all_btn--count').text(searchCount);
+        $('.search .persona__comeInNotification').removeClass(
+          'persona__comeInNotification--active',
+        );
+      } else {
+        $('.search__all_btn').removeClass('search__all_btn--active');
+        $('.search .persona__comeInNotification').addClass('persona__comeInNotification--active');
+      }
+    } else {
+      $('.search').removeClass('search--active');
+      $('.search__link_wrap .sidebar__side__link').removeClass('sidebar__side__link--active');
+      $('.search__item').removeClass('search__item--active');
+      $('.search__all_btn').removeClass('search__all_btn--active');
+    }
+  });
+
+  $(document).on('blur', '.search__input', function () {
+    $('.search__block').removeClass('search__block--active');
+    $('.search').removeClass('search--active');
+    $('.body__overlay').removeClass('active');
+    $('.header').removeClass('header--overlay');
+    $(this).removeClass('search__input--active');
+    $('.search__link_wrap .sidebar__side__link').removeClass('sidebar__side__link--active');
+    $('.search__item').removeClass('search__item--active');
+    $('.search__all_btn').removeClass('search__all_btn--active');
+    $('.search .persona__comeInNotification').removeClass('persona__comeInNotification--active');
+    $('.sidebar').removeClass('sidebar--overlay');
+  });
+
+  $(document).on('click', '.search__burger', function () {
+    $('.search__block').removeClass('search__block--active');
+    $('.search').removeClass('search--active');
+    $('.body__overlay').removeClass('active');
+    $('.header').removeClass('header--overlay');
+    $(this).removeClass('search__input--active');
+    $('.search__link_wrap .sidebar__side__link').removeClass('sidebar__side__link--active');
+    $('.search__item').removeClass('search__item--active');
+    $('.search__all_btn').removeClass('search__all_btn--active');
+    $('.search .persona__comeInNotification').removeClass('persona__comeInNotification--active');
+    $('.sidebar').removeClass('sidebar--overlay');
+  });
+  // Поиск!
+
+  // Защита почты!
+
+  // Защита почты!
 });

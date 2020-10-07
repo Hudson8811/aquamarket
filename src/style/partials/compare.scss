@@ -33,6 +33,14 @@
 
     &.compare__col--four {
       width: 20%;
+
+      @media screen and (max-width: 1620px) {
+        width: 25%;
+
+        &:nth-child(5) {
+          display: none;
+        }
+      }
     }
 
     .products__item {

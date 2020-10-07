@@ -385,6 +385,7 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      width: 100%;
 
       a {
         display: block;
@@ -393,10 +394,6 @@
         font-size: $extraSmallText;
         text-decoration: underline;
         color: $darkMainColor;
-
-        &:first-child {
-          margin-top: 25px;
-        }
       }
 
       span {

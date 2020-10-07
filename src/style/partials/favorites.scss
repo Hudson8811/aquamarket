@@ -221,6 +221,10 @@
     color: $red;
     user-select: none;
 
+    @media screen and(max-width:1620px) {
+      font-size: $smallText2;
+    }
+
     &:hover {
       text-decoration: underline;
     }

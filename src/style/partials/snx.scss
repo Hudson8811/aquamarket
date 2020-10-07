@@ -6,6 +6,12 @@
   width: 50%;
   background-color: $brightLightMain;
 
+  @media screen and (max-width: 900px) {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px 10px 60px;
+  }
+
   &__page {
     padding-top: 102px;
 
@@ -18,11 +24,19 @@
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+    }
   }
 
   &__image {
     display: block;
     width: 50%;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
   }
 
   &__subtitle {
@@ -31,6 +45,14 @@
     font-family: $bold;
     font-size: $bigText4;
     color: $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      font-size: $bigText;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: $normalText;
+    }
   }
 
   &__title {
@@ -42,6 +64,14 @@
     font-family: $bold;
     font-size: $GreatText;
     color: $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      font-size: $extraBigText2;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: $extraBigText;
+    }
   }
 
   &__description {
@@ -50,6 +80,16 @@
     font-family: $medium;
     font-size: $smallBigText;
     color: $darkMain;
+
+    @media screen and (max-width: 1620px) {
+      margin-bottom: 40px;
+      font-size: $normalText;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin-bottom: 30px;
+      font-size: $smallText;
+    }
   }
 
   &__btn {
@@ -67,6 +107,21 @@
     color: $brightLightMain;
     background-color: $darkMain;
     transition: 0.5s;
+
+    @media screen and (max-width: 1620px) {
+      min-height: 62px;
+      max-width: 355px;
+      padding: 0 48px;
+      font-size: $normalText;
+    }
+
+    @media screen and (max-width: 900px) {
+      min-height: 50px;
+      width: 100%;
+      max-width: none;
+      padding: 0 28px;
+      font-size: $smallText;
+    }
 
     &:hover {
       color: $darkMainColor;

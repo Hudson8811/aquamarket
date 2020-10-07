@@ -3,6 +3,12 @@
     background-color: $dark30;
   }
 
+  .snx__subtitle,
+  .snx__title,
+  .snx__description {
+    color: $lightMain;
+  }
+
   .snx__description {
     text-align: center;
   }
