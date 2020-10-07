@@ -73,16 +73,15 @@
 
   &--active_catalog {
     z-index: 7;
-
-    &:before {
-      @media screen and (max-width: 768px) {
-      }
-    }
   }
 
   &--active_catalog.header--fixed {
     &:before {
       height: calc(100% - 10px);
+
+      @media screen and (max-width: 768px) {
+        height: calc(100% - 5px);
+      }
     }
   }
 
