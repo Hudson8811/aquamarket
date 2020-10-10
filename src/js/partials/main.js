@@ -98,10 +98,10 @@ $(document).ready(function () {
     },
   });
 
-  $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : null;
+  $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : $('.brends__slider--js').slick('init');
 
   $(window).resize(function () {
-    $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : null;
+    $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : $('.brends__slider--js').slick('init');
   });
 
   $(document).on('click', '.brends_btn--mobile', function (e) {
