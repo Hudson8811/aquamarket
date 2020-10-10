@@ -1209,7 +1209,7 @@
   }
 
   &__form,
-  &__image {
+  &__imgWrapper {
     width: 50%;
 
     @media screen and (max-width: 768px) {
@@ -1219,6 +1219,8 @@
 
   &__image {
     display: block;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
   }
 
