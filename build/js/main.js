@@ -117,7 +117,7 @@ $(document).ready(function () {
   });
 
   $('.sidebar').mouseleave(function () {
-    if(!$('.basket').hasClass('is-active') && !$('.fix_cct').hasClass('fix_cct--active') && !$('.call_popup').hasClass('is-active') ){
+    if(!$('.basket').hasClass('is-active') && !$('.fix_cct').hasClass('fix_cct--active') && !$('.call_popup').hasClass('is-active') && !$('.search__block').hasClass('search__block--active') ){
       $('.body__overlay').removeClass('active');
     $('.header').removeClass('header--overlay');
     $('.sidebar__hover').removeClass('active');
@@ -353,7 +353,7 @@ $(document).ready(function () {
   $(document).on('click', '.favorites__counts', function(e){
     e.preventDefault();
   })
-  
+
   $(document).on('click', '.favorites__counts__btn', function () {
     let favoritesCounts = $(this).siblings('.favorites__counts__input').val();
     $(this).hasClass('favorites__counts__btn--max') ? ++favoritesCounts : --favoritesCounts;
