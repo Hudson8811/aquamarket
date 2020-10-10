@@ -240,6 +240,10 @@ $(document).ready(function () {
   // Настройка кастомного скрола!
 
   // Счетчик избранного!
+  $(document).on('click', '.favorites__counts', function(e){
+    e.preventDefault();
+  })
+  
   $(document).on('click', '.favorites__counts__btn', function () {
     let favoritesCounts = $(this).siblings('.favorites__counts__input').val();
     $(this).hasClass('favorites__counts__btn--max') ? ++favoritesCounts : --favoritesCounts;

@@ -215,6 +215,11 @@
   top: 0;
   left: 0;
   width: 100%;
+  will-change: auto;
+
+  * {
+    will-change: auto;
+  }
 
   @media screen and (max-width: 768px) {
     width: 100vw;
@@ -1085,6 +1090,11 @@
 
   &__catalog {
     width: calc(100% - 308px - 9%);
+    will-change: auto;
+
+    * {
+      will-change: auto;
+    }
 
     @media screen and (max-width: 1100px) {
       width: calc(100% - 98px - 3%);

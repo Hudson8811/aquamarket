@@ -119,6 +119,7 @@
     padding-bottom: 25px;
     margin-bottom: -25px;
     border-bottom: 2px solid $darkMain;
+    text-decoration: none;
 
     @media screen and (max-width: 1050px) {
       width: 100%;
@@ -138,7 +139,7 @@
       &:before {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
         display: block;
         width: 14px;

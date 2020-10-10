@@ -1,10 +1,6 @@
 .map__page {
   .bread_crumbs {
     position: absolute;
-
-    @media screen and (max-width: 1300px) {
-      position: relative;
-    }
   }
 
   .products__heading {
@@ -18,12 +14,16 @@
       text-align: center;
     }
   }
+
+  .products__heading__wrapper {
+    padding-top: 50px;
+  }
 }
 
 .map_catalog {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 100px;
 
   @media screen and (max-width: 1000px) {

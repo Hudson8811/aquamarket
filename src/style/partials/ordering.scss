@@ -398,6 +398,12 @@
     width: 100%;
     cursor: pointer;
 
+    &:hover {
+      .ordering__radio_btn__b {
+        background-color: rgba(204, 255, 252, 0.5);
+      }
+    }
+
     & + & {
       margin-top: 20px;
     }

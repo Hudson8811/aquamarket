@@ -1006,6 +1006,11 @@
     color: $darkMainColor;
     border: 1px dashed $darkMain;
     border-radius: 55px;
+
+    &:hover {
+      font-family: AktifoBMedium;
+      border-style: solid;
+    }
   }
 }
 
