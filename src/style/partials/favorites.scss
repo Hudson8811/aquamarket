@@ -2,10 +2,10 @@
   &__heading {
     position: relative;
     display: block;
-    padding-top: 50px;
+    padding-top: 0;
 
     @media screen and (max-width: 1620px) {
-      padding-top: 0;
+      padding-top: 50px;
     }
 
     .section__title {
@@ -14,8 +14,12 @@
 
     .favorites__remove {
       position: absolute;
-      top: calc(50% + 16px);
-      right: 0;
+      top: 50%;
+      right: -10px;
+
+      @media screen and (max-width: 1620px) {
+        top: calc(50% + 16px);
+      }
 
       @media screen and (max-width: 1050px) {
         position: relative;

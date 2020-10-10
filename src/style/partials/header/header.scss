@@ -85,6 +85,10 @@
     }
   }
 
+  .basket.basket.is-active {
+    z-index: 10;
+  }
+
   &__burger {
     position: relative;
     display: none;

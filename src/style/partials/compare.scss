@@ -1,6 +1,35 @@
 .compare {
   display: block;
 
+  &__scroll {
+    margin-top: 50px;
+
+    .compare {
+      width: 1600px;
+      padding-top: 50px;
+    }
+
+    .mCSB_scrollTools_horizontal {
+      top: 0;
+
+      &:hover {
+        .mCSB_dragger_bar {
+          background-color: $darkMain;
+        }
+      }
+
+      .mCSB_dragger_bar {
+        background-color: $darkMain;
+      }
+    }
+
+    &.mCustomScrollbar.mCS_no_scrollbar,
+    &.mCustomScrollbar.mCS_touch_action,
+    &.mCustomScrollbar {
+      touch-action: auto;
+    }
+  }
+
   &__page {
     .main {
       padding-bottom: 160px;
@@ -33,14 +62,6 @@
 
     &.compare__col--four {
       width: 20%;
-
-      @media screen and (max-width: 1620px) {
-        width: 25%;
-
-        &:nth-child(5) {
-          display: none;
-        }
-      }
     }
 
     .products__item {

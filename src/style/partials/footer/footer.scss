@@ -172,6 +172,7 @@
     &__content {
       list-style: none;
       li {
+        min-height: 20px;
         a {
           display: block;
           font-family: $medium;
@@ -394,6 +395,11 @@
         font-size: $extraSmallText;
         text-decoration: underline;
         color: $darkMainColor;
+
+        &:first-child {
+          text-align: center;
+          width: 100%;
+        }
       }
 
       span {

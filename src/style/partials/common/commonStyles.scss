@@ -6,6 +6,10 @@ body {
   position: relative;
   display: block;
   background-color: $lightMain;
+
+  &.body--hidden {
+    overflow: hidden;
+  }
 }
 
 .body__overlay {
@@ -66,6 +70,10 @@ body {
   box-sizing: border-box;
   width: 100%;
   padding-top: 50px;
+
+  @media screen and (max-width: 1620px) {
+    padding-top: 20px;
+  }
 }
 
 .container {
@@ -465,7 +473,10 @@ body {
 
   @media screen and (max-width: 768px) {
     top: 162px;
+    overflow: auto;
+    box-sizing: border-box;
     padding: 10px 15px 50px;
+    height: calc(100vh - 160px);
   }
 
   &--active {
@@ -485,6 +496,8 @@ body {
   }
 
   &__link.sidebar__main__link {
+    padding-right: 40px;
+
     &:after {
       display: block;
       height: 5px;
@@ -492,6 +505,11 @@ body {
       background-image: url(../img/fixArrow.svg);
       transform: rotate(0);
       transition: 0.5s;
+
+      @media screen and (max-width: 768px) {
+        width: 10px;
+        height: 10px;
+      }
     }
 
     &.fix_cct__link--active {
@@ -571,7 +589,7 @@ body {
     .sidebar__main__link {
       display: block;
       box-sizing: border-box;
-      padding: 8px 29px 8px 25px;
+      padding: 8px 40px 8px 25px;
       font-size: $normalText;
 
       @media screen and (max-width: 768px) {
@@ -1169,6 +1187,11 @@ body {
       text-decoration: underline;
       color: $darkMainColor;
 
+      &:first-child {
+        width: 100%;
+        text-align: center;
+      }
+
       & + & {
         margin-top: 14px;
       }
@@ -1177,7 +1200,7 @@ body {
 
   &__remove {
     display: block;
-    margin: auto auto 0;
+    margin: auto auto auto;
     cursor: pointer;
   }
 }

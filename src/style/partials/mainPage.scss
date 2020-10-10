@@ -117,6 +117,16 @@
   &__main {
     width: 450px;
 
+    & > li {
+      position: relative;
+
+      &:hover {
+        & > .sidebar__side {
+          display: block;
+        }
+      }
+    }
+
     @media screen and (max-width: 1620px) {
       width: 323px;
     }
@@ -148,7 +158,12 @@
   }
 
   &__side {
+    position: absolute;
+    top: -19px;
+    left: 100%;
+    box-sizing: border-box;
     width: 442px;
+    padding: 20px 13px 20px 26px;
     display: none;
     background-color: $lightMain;
 
