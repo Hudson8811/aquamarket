@@ -167,13 +167,13 @@ $(document).ready(function () {
 
   setProgress('.banner__tools .slick-active .banner__svg__circle', 100, 3);
 
-  $('.banner_slider--js').on('beforeChange', function (slick, currentSlide) {
-    setProgress('.banner__tools .banner__svg__circle', 0, 0);
+  // $('.banner_slider--js').on('beforeChange', function (slick, currentSlide) {
+  //   setProgress('.banner__tools .banner__svg__circle', 0, 0);
 
-    setTimeout(() => {
-      setProgress('.banner__tools .slick-active .banner__svg__circle', 100, 3);
-    }, 0);
-  });
+  //   setTimeout(() => {
+  //     setProgress('.banner__tools .slick-active .banner__svg__circle', 100, 3);
+  //   }, 0);
+  // });
   // Настройка прогресс-бара!
 
   // Разворот каталога категорий!
@@ -211,11 +211,11 @@ $(document).ready(function () {
   //   },
   // });
 
-  $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : $('.brends__slider--js').slick('init');
+  // $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : $('.brends__slider--js').slick('init');
 
-  $(window).resize(function () {
-    $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : $('.brends__slider--js').slick('init');
-  });
+  // $(window).resize(function () {
+  //   $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : $('.brends__slider--js').slick('init');
+  // });
 
   $(document).on('click', '.brends_btn--mobile', function (e) {
     e.preventDefault();
@@ -304,13 +304,13 @@ $(document).ready(function () {
   // Сайдбар каталога!
 
   // Слайдер карточки товара!
-  $('.products__images__slider--js').slick({
-    infinite: true,
-    autoplay: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,
-  });
+  // $('.products__images__slider--js').slick({
+  //   infinite: true,
+  //   autoplay: false,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   dots: false,
+  // });
   // Слайдер карточки товара!
 
   // Ползунок цены!
@@ -386,33 +386,33 @@ $(document).ready(function () {
   // Счетчик избранного!
 
   // Слайдер карточки товара!
-  $('.card_product__big_slider--js').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,
-    prevArrow: $('.card_product__tools .banner__arrow--prev--js'),
-    nextArrow: $('.card_product__tools .banner__arrow--next--js'),
-  });
+  // $('.card_product__big_slider--js').slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: true,
+  //   fade: true,
+  //   prevArrow: $('.card_product__tools .banner__arrow--prev--js'),
+  //   nextArrow: $('.card_product__tools .banner__arrow--next--js'),
+  // });
 
-  $(document).on('click', '.card_product__small_slider__item', function () {
-    const productSlideNumber = $(this).data('id');
-    $('.card_product__small_slider__item').removeClass('card_product__small_slider__item--active');
-    $(this).addClass('card_product__small_slider__item--active');
-    $('.card_product__big_slider--js').slick('slickGoTo', productSlideNumber);
-  });
-  $('.card_product__big_slider--js').on('beforeChange', function (
-    event,
-    slick,
-    currentSlide,
-    nextSlide,
-  ) {
-    $('.card_product__small_slider__item').removeClass('card_product__small_slider__item--active');
-    $(`.card_product__small_slider__item[data-id="${nextSlide}"]`).addClass(
-      'card_product__small_slider__item--active',
-    );
-  });
+  // $(document).on('click', '.card_product__small_slider__item', function () {
+  //   const productSlideNumber = $(this).data('id');
+  //   $('.card_product__small_slider__item').removeClass('card_product__small_slider__item--active');
+  //   $(this).addClass('card_product__small_slider__item--active');
+  //   $('.card_product__big_slider--js').slick('slickGoTo', productSlideNumber);
+  // });
+  // $('.card_product__big_slider--js').on('beforeChange', function (
+  //   event,
+  //   slick,
+  //   currentSlide,
+  //   nextSlide,
+  // ) {
+  //   $('.card_product__small_slider__item').removeClass('card_product__small_slider__item--active');
+  //   $(`.card_product__small_slider__item[data-id="${nextSlide}"]`).addClass(
+  //     'card_product__small_slider__item--active',
+  //   );
+  // });
   // Слайдер карточки товара!
 
   // Маска телефона!
@@ -610,21 +610,21 @@ $(document).ready(function () {
   // Редактирование адреса!
 
   // Слайдер статьи!
-  $('.article__slider--js').slick({
-    infinite: false,
-    centerMode: true,
-    variableWidth: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: false,
-  });
+  // $('.article__slider--js').slick({
+  //   infinite: false,
+  //   centerMode: true,
+  //   variableWidth: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   fade: false,
+  // });
 
-  $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : null;
+  // $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : null;
 
-  $(window).resize(function () {
-    $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : null;
-  });
+  // $(window).resize(function () {
+  //   $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : null;
+  // });
   // Слайдер статьи!
 
   // Мобильное меню!
