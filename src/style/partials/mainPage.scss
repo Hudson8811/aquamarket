@@ -63,6 +63,7 @@
       color: $darkMainColor;
       border-radius: 55px;
       transition: 0.5s;
+      will-change: auto;
 
       &:after {
         content: '';
@@ -75,6 +76,7 @@
         margin-top: -2px;
         background: center / auto url(../img/arrow.svg) no-repeat;
         transform: rotate(-90deg);
+        will-change: auto;
 
         @media screen and (max-width: 768px) {
           right: 0;

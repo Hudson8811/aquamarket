@@ -753,10 +753,10 @@ $(document).ready(function () {
     $fixCct.hasClass('fix_cct--active') && e.target.classList.contains('sidebar--overlay') ||
     $fixCct.hasClass('fix_cct--active') && e.target.classList.contains('header--overlay')
     ){
-      $('.fix_cct').removeClass('fix_cct--active');
       removeOverlay();
       $('body').removeClass('body--hidden');
-
+      $('.catalog_btn').removeClass('catalog_btn--active');
+      $('.fix_cct').removeClass('fix_cct--active');
     }
   })
 });
