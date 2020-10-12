@@ -754,6 +754,7 @@ $(document).ready(function () {
     $fixCct.hasClass('fix_cct--active') && e.target.classList.contains('header--overlay')
     ){
       removeOverlay();
+      $('.header').removeClass('header--active_catalog');
       $('body').removeClass('body--hidden');
       $('.catalog_btn').removeClass('catalog_btn--active');
       $('.fix_cct').removeClass('fix_cct--active');
