@@ -134,7 +134,7 @@ $(document).ready(function () {
   // Инициализайия главного баннера!
   $('.banner_slider--js').slick({
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -198,7 +198,7 @@ $(document).ready(function () {
   // Инициализайия каталога брендов!
   $('.brends__slider--js').slick({
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     slidesToShow: 5,
     slidesToScroll: 5,
