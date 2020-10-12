@@ -22,20 +22,20 @@ $(document).ready(function () {
   // Настройка сайдбара!
 
   // Инициализайия главного баннера!
-  // $('.banner_slider--js').slick({
-  //   infinite: true,
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   dots: true,
-  //   prevArrow: $('.banner__tools .banner__arrow--prev--js'),
-  //   nextArrow: $('.banner__tools .banner__arrow--next--js'),
-  //   appendDots: $('.banner__tools .banner__dots--js'),
-  //   customPaging: function () {
-  //     return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
-  //   },
-  // });
+  $('.banner_slider--js').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    prevArrow: $('.banner__tools .banner__arrow--prev--js'),
+    nextArrow: $('.banner__tools .banner__arrow--next--js'),
+    appendDots: $('.banner__tools .banner__dots--js'),
+    customPaging: function () {
+      return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
+    },
+  });
   // Инициализайия главного баннера!
 
   // Настройка прогресс-бара!
@@ -86,20 +86,20 @@ $(document).ready(function () {
   // Разворот каталога категорий!
 
   // Инициализайия каталога брендов!
-  // $('.brends__slider--js').slick({
-  //   infinite: true,
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 5,
-  //   dots: true,
-  //   prevArrow: $('.brends__tools .banner__arrow--prev--js'),
-  //   nextArrow: $('.brends__tools .banner__arrow--next--js'),
-  //   appendDots: $('.brends__tools .banner__dots--js'),
-  //   customPaging: function () {
-  //     return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
-  //   },
-  // });
+  $('.brends__slider--js').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    dots: true,
+    prevArrow: $('.brends__tools .banner__arrow--prev--js'),
+    nextArrow: $('.brends__tools .banner__arrow--next--js'),
+    appendDots: $('.brends__tools .banner__dots--js'),
+    customPaging: function () {
+      return '<svg class="banner__svg" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle class="banner__svg__circle" stroke="black" stroke-width="1" cx="15" cy="15" r="13" fill="transparent" /></svg>';
+    },
+  });
 
   $(window).width() < 769 ? $('.brends__slider--js').slick('unslick') : $('.brends__slider--js').slick('init');
 
