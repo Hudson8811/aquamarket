@@ -379,7 +379,18 @@
 
   &__item2 {
     background-color: $brightLightMain;
-
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      display: block;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 80%;
+      background: #f8f8f8;
+      filter: blur(250px);
+    }
     .banner__bg {
       position: absolute;
       top: 0;
@@ -447,6 +458,23 @@
 
   &__item3 {
     background-color: #f2f2f7;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      display: block;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 80%;
+      background: #f8f8f8;
+      filter: blur(250px);
+
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+    }
 
     .banner__icon {
       position: absolute;
