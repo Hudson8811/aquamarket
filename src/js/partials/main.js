@@ -243,8 +243,8 @@ $(document).ready(function () {
   $(window).on('load', function () {
     $('.compare__scroll').mCustomScrollbar({
       axis:"x",
-      scrollInertia:5000,
-      contentTouchScroll:5000
+      scrollInertia:500,
+      contentTouchScroll:10
       
     });
   });
