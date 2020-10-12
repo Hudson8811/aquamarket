@@ -277,7 +277,7 @@
       width: 80%;
       max-width: 999px;
       object-fit: cover;
-      transform: matrix(-1, 0, 0, 1, 0, 0);
+      // transform: matrix(-1, 0, 0, 1, 0, 0);
 
       @media screen and (max-width: 1620px) {
         width: 70%;
@@ -330,14 +330,14 @@
       width: 80%;
       max-width: 999px;
       object-fit: cover;
-      transform: matrix(-1, 0, 0, 1, 0, 0);
+      // transform: matrix(-1, 0, 0, 1, 0, 0);
 
       @media screen and (max-width: 1620px) {
         width: 70%;
       }
 
       @media screen and (max-width: 1000px) {
-        object-position: 25%;
+        object-position: 75%;
         top: 32px;
         right: auto;
         left: 0;
@@ -390,7 +390,7 @@
     .banner__bg {
       position: absolute;
       top: 0;
-      right: -130px;
+      right: 0;
       z-index: 3;
       height: 100%;
       width: 80%;
@@ -398,7 +398,7 @@
       object-fit: cover;
       object-position: top;
       mix-blend-mode: darken;
-      transform: matrix(-1, 0, 0, 1, 0, 0);
+      // transform: matrix(-1, 0, 0, 1, 0, 0);
 
       @media screen and (max-width: 1620px) {
         width: 90%;
@@ -406,17 +406,18 @@
 
       @media screen and (max-width: 1200px) {
         top: auto;
-        right: -20%;
-        bottom: -20%;
+        right: 0;
+        bottom: 0%;
         z-index: 2;
         height: 100%;
         width: 450px;
         object-fit: contain;
+        object-position: bottom;
       }
 
       @media screen and (max-width: 450px) {
         right: -40%;
-        bottom: -40%;
+        bottom: -7%;
       }
     }
 
