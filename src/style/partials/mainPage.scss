@@ -232,6 +232,10 @@
     position: relative;
     width: calc(100vw - 525px);
 
+    @media screen and (min-width: 2000px) {
+      width: 100%;
+    }
+
     @media screen and (max-width: 1620px) {
       height: 400px;
       width: calc(100vw - 383px);
