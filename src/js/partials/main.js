@@ -242,7 +242,9 @@ $(document).ready(function () {
 
   $(window).on('load', function () {
     $('.compare__scroll').mCustomScrollbar({
-      horizontalScroll:true,
+      axis:"x",
+      scrollInertia:5000,
+      contentTouchScroll:5000
       
     });
   });
@@ -518,10 +520,12 @@ $(document).ready(function () {
   // Мобильное меню!
   $(document).on('click', '.header__burger', function () {
     $('.mobileMenu').addClass('mobileMenu--active');
+    $('body').addClass('body--hidden');
   });
 
   $(document).on('click', '.mobileMenu__remove', function () {
     $('.mobileMenu').removeClass('mobileMenu--active');
+    $('body').removeClass('body--hidden');
   });
 
   // Мобильное меню!
