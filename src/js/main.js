@@ -6,7 +6,7 @@
 //= libs/jquery-ui.min.js
 //= libs/jquery.ui.touch-punch.min.js
 //= libs/jquery.mCustomScrollbar.min.js
-/*// = libs/slick.min.js*/
+//= libs/slick.min.js
 
 /* my scripts */
 
