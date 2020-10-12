@@ -1,6 +1,11 @@
 .compare {
   display: block;
   height: 1000px;
+  will-change: auto;
+
+  * {
+    will-change: auto;
+  }
 
   &__scroll {
     margin-top: 50px;
