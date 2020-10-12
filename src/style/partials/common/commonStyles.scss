@@ -477,6 +477,7 @@ body {
     box-sizing: border-box;
     padding: 10px 15px 50px;
     height: calc(100vh - 160px);
+    padding-bottom: 150px;
   }
 
   &--active {
@@ -1353,5 +1354,37 @@ body {
 
   .search__item {
     display: flex;
+  }
+}
+
+.favorites__counts_wrapper--max,
+.favorites__counts_wrapper--min {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 14px;
+    height: 100%;
+  }
+
+  &:hover {
+    .favorites__counts__btn {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.favorites__counts_wrapper--min {
+  &:before {
+    left: 0;
+  }
+}
+
+.favorites__counts_wrapper--max {
+  &:before {
+    right: 0;
   }
 }

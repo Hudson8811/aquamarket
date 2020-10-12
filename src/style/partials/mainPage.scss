@@ -659,6 +659,11 @@
   &__dots {
     list-style: none;
     margin-left: 72px;
+    will-change: auto;
+
+    * {
+      will-change: auto;
+    }
 
     @media screen and (max-width: 1000px) {
       width: 100%;
@@ -1204,6 +1209,11 @@
   &__tools {
     .banner__arrow {
       border-color: $darkMain;
+      will-change: auto;
+
+      * {
+        will-change: auto;
+      }
 
       svg {
         path {

@@ -5,8 +5,16 @@
     margin-top: 50px;
 
     .compare {
-      width: 1600px;
+      min-width: 1120px;
       padding-top: 50px;
+
+      &--three {
+        min-width: 840px;
+      }
+
+      &--two {
+        min-width: 560px;
+      }
     }
 
     .mCSB_scrollTools_horizontal {
@@ -41,6 +49,22 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+
+    @media screen and (max-width: 1300px) {
+      &:not(:first-child) {
+        .compare__col:first-child {
+          display: none;
+        }
+      }
+
+      &:first-child {
+        flex-wrap: wrap;
+
+        .compare__col:first-child {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &__col {
@@ -50,6 +74,10 @@
     align-items: stretch;
     width: 33.333333333%;
 
+    @media screen and (max-width: 1300px) {
+      width: 50%;
+    }
+
     &:first-child {
       .compare__desc {
         padding-left: 0;
@@ -58,10 +86,18 @@
 
     &.compare__col--three {
       width: 25%;
+
+      @media screen and (max-width: 1300px) {
+        width: 33.333%;
+      }
     }
 
     &.compare__col--four {
       width: 20%;
+
+      @media screen and (max-width: 1300px) {
+        width: 25%;
+      }
     }
 
     .products__item {
@@ -69,7 +105,7 @@
 
       @media screen and (max-width: 1000px) {
         width: 100%;
-        padding: 26px;
+        padding: 10px;
       }
     }
   }
@@ -82,6 +118,10 @@
     border-top: 1px solid $darkMain;
     border-bottom: 1px solid $darkMain;
     list-style: none;
+
+    @media screen and (max-width: 1000px) {
+      padding: 10px;
+    }
 
     li {
       box-sizing: border-box;
@@ -124,6 +164,10 @@
   &__bot_desc {
     box-sizing: border-box;
     padding: 80px 34px 0 34px;
+
+    @media screen and (max-width: 1000px) {
+      padding: 10px;
+    }
 
     &__item {
       display: block;
