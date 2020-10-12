@@ -1085,6 +1085,7 @@ body {
   left: 0;
   top: 0;
   z-index: 101;
+  overflow: auto;
   display: none;
   box-sizing: border-box;
   flex-direction: column;
@@ -1201,7 +1202,8 @@ body {
 
   &__remove {
     display: block;
-    margin: auto auto auto;
+    margin: 30px auto;
+    flex-shrink: 0;
     cursor: pointer;
   }
 }
