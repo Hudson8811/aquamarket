@@ -1,6 +1,10 @@
 .map__page {
   .bread_crumbs {
     position: absolute;
+
+    @media screen and(max-width:1100px) {
+      top: 30%;
+    }
   }
 
   .products__heading {

@@ -620,10 +620,10 @@ $(document).ready(function () {
     fade: false,
   });
 
-  $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : null;
+  $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : $('.article__slider--js').slick('init');;
 
   $(window).resize(function () {
-    $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : null;
+    $(window).width() < 1001 ? $('.article__slider--js').slick('unslick') : $('.article__slider--js').slick('init');;
   });
   // Слайдер статьи!
 
