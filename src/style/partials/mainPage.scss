@@ -379,50 +379,15 @@
 
   &__item2 {
     background-color: $brightLightMain;
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      display: block;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 80%;
-      background: #f8f8f8;
-      filter: blur(250px);
-    }
+
     .banner__bg {
       position: absolute;
       top: 0;
       right: 0;
       z-index: 3;
       height: 100%;
-      width: 80%;
-      max-width: 999px;
+      width: 100%;
       object-fit: cover;
-      object-position: top;
-      mix-blend-mode: darken;
-      // transform: matrix(-1, 0, 0, 1, 0, 0);
-
-      @media screen and (max-width: 1620px) {
-        width: 90%;
-      }
-
-      @media screen and (max-width: 1200px) {
-        top: auto;
-        right: 0;
-        bottom: 0%;
-        z-index: 2;
-        height: 100%;
-        width: 450px;
-        object-fit: contain;
-        object-position: bottom;
-      }
-
-      @media screen and (max-width: 450px) {
-        right: -40%;
-        bottom: -7%;
-      }
     }
 
     .banner__text_block {
@@ -459,23 +424,6 @@
   &__item3 {
     background-color: #f2f2f7;
 
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      display: block;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 80%;
-      background: #f8f8f8;
-      filter: blur(250px);
-
-      @media screen and (max-width: 1200px) {
-        display: none;
-      }
-    }
-
     .banner__icon {
       position: absolute;
       top: 50%;
@@ -502,19 +450,8 @@
       right: 0;
       z-index: 3;
       height: 100%;
-      width: 70%;
-      max-width: 827px;
+      width: 100%;
       object-fit: cover;
-
-      @media screen and (max-width: 1620px) {
-        width: 60%;
-      }
-
-      @media screen and (max-width: 1200px) {
-        right: -15%;
-        top: 40%;
-        width: 486px;
-      }
     }
 
     .banner__text_block {
